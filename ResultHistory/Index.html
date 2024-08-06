@@ -1,0 +1,722 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="user-scalable=yes, target-densityDpi=device-dpi">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>开奖结果</title>
+
+    <link href="../default/css/layoutbl.min.css" type="text/css" rel="stylesheet">
+    <link href="../js/jquery/new/jqueryuib.min.css" type="text/css" rel="stylesheet">
+    <link href="../default/css/Skins/blue/skinbd.min.css" type="text/css" rel="stylesheet">
+    <script src="../js/jquerybundle.min.js"></script>
+
+    <link href="/default/css/g_HK6.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        var _root = "";
+        var _urlParams = "";
+    </script>
+</head>
+
+<body class="L_HK6 skin_blue" style="">
+    <style>
+        #pageDiv {
+            font-size: 13px;
+        }
+
+        .list tbody .hover td,
+        .list tbody .hover:nth-child(even) {
+            background: rgb(255, 255, 198);
+        }
+    </style>
+
+
+    <div class="main jt-container pad10">
+        <div class="bar_tit">
+            <b>开奖结果</b>
+
+            <div class="search">
+
+                <span class="title">彩种选择</span>
+                <span>
+                    <select id="lottery" onchange="lotChange()">
+                        <option value="NMCHK6" type="HK6" lotterycycle="1" selected="selected">新澳门六合彩</option>
+                        <option value="MCHK6" type="HK6" lotterycycle="1">老澳門六合彩</option>
+                        <option value="HK6" type="HK6" lotterycycle="1">香港六合彩</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+
+
+        <div id="drawTable" class="contents">
+            <table class="list data_table  table_ball kj_style">
+                <tbody>
+                    <tr>
+                        <th rowspan="2" nowrap="nowrap">期数</th>
+                        <th rowspan="2" nowrap="nowrap">日期</th>
+                        <th colspan="14" nowrap="nowrap">彩球号码</th>
+                        <th>特</th>
+                        <th>特</th>
+                        <th>特</th>
+                        <th nowrap="nowrap">特尾</th>
+                        <th nowrap="nowrap">特合</th>
+                        <th nowrap="nowrap">特合</th>
+                        <th nowrap="">特合尾</th>
+                        <th rowspan="2" nowrap="nowrap">总分</th>
+                        <th>总</th>
+                        <th>总</th>
+                        <th rowspan="2">波段</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">一</th>
+                        <th colspan="2">二</th>
+                        <th colspan="2">三</th>
+                        <th colspan="2">四</th>
+                        <th colspan="2">五</th>
+                        <th colspan="2">六</th>
+                        <th colspan="2">特</th>
+                        <th nowrap="nowrap">单双</th>
+                        <th nowrap="nowrap">大小</th>
+                        <th nowrap="">大中小</th>
+                        <th nowrap="nowrap">大小</th>
+                        <th nowrap="nowrap">单双</th>
+                        <th nowrap="nowrap">大小</th>
+                        <th nowrap="nowrap">大小</th>
+                        <th nowrap="nowrap">单双</th>
+                        <th nowrap="nowrap">大小</th>
+                    </tr>
+                </tbody>
+                <tbody id="betList">
+                    <tr>
+                        <td class="period">2024218</td>
+                        <td class="drawTime" nowrap="true">2024-08-05 (星期一) 21:30</td>
+                        <td class="name"><span class="ico b12">12</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b27">27</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b07">07</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b13">13</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b03">03</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b20">20</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b37">37</span></td>
+                        <td class="name">龙</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">119</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name blue02">蓝</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024217</td>
+                        <td class="drawTime" nowrap="true">2024-08-04 (星期日) 21:30</td>
+                        <td class="name"><span class="ico b22">22</span></td>
+                        <td class="name">羊</td>
+                        <td class="name"><span class="ico b37">37</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b49">49</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b18">18</span></td>
+                        <td class="name">猪</td>
+                        <td class="name"><span class="ico b11">11</span></td>
+                        <td class="name">马</td>
+                        <td class="name"><span class="ico b30">30</span></td>
+                        <td class="name">猪</td>
+                        <td class="name"><span class="ico b15">15</span></td>
+                        <td class="name">虎</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">182</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name blue02">蓝</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024216</td>
+                        <td class="drawTime" nowrap="true">2024-08-03 (星期六) 21:30</td>
+                        <td class="name"><span class="ico b18">18</span></td>
+                        <td class="name">猪</td>
+                        <td class="name"><span class="ico b07">07</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b09">09</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b06">06</span></td>
+                        <td class="name">猪</td>
+                        <td class="name"><span class="ico b28">28</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b36">36</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b15">15</span></td>
+                        <td class="name">虎</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">119</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name blue02">蓝</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024215</td>
+                        <td class="drawTime" nowrap="true">2024-08-02 (星期五) 21:30</td>
+                        <td class="name"><span class="ico b13">13</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b21">21</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b26">26</span></td>
+                        <td class="name">兔</td>
+                        <td class="name"><span class="ico b32">32</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b33">33</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b02">02</span></td>
+                        <td class="name">兔</td>
+                        <td class="name"><span class="ico b20">20</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">中</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">147</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name blue02">蓝</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024214</td>
+                        <td class="drawTime" nowrap="true">2024-08-01 (星期四) 21:30</td>
+                        <td class="name"><span class="ico b32">32</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b48">48</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b18">18</span></td>
+                        <td class="name">猪</td>
+                        <td class="name"><span class="ico b27">27</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b44">44</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b36">36</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b06">06</span></td>
+                        <td class="name">猪</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">211</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name green02">绿</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024213</td>
+                        <td class="drawTime" nowrap="true">2024-07-31 (星期三) 21:30</td>
+                        <td class="name"><span class="ico b29">29</span></td>
+                        <td class="name">鼠</td>
+                        <td class="name"><span class="ico b22">22</span></td>
+                        <td class="name">羊</td>
+                        <td class="name"><span class="ico b17">17</span></td>
+                        <td class="name">鼠</td>
+                        <td class="name"><span class="ico b19">19</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b40">40</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b04">04</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b38">38</span></td>
+                        <td class="name">兔</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">169</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name green02">绿</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024212</td>
+                        <td class="drawTime" nowrap="true">2024-07-30 (星期二) 21:30</td>
+                        <td class="name"><span class="ico b44">44</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b13">13</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b32">32</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b40">40</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b22">22</span></td>
+                        <td class="name">羊</td>
+                        <td class="name"><span class="ico b17">17</span></td>
+                        <td class="name">鼠</td>
+                        <td class="name"><span class="ico b49">49</span></td>
+                        <td class="name">龙</td>
+                        <td class="name dx_h">和</td>
+                        <td class="name dx_h">和</td>
+                        <td class="name dx_h">和</td>
+                        <td class="name dx_h">和</td>
+                        <td class="name dx_h">和</td>
+                        <td class="name dx_h">和</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">217</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name green02">绿</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024211</td>
+                        <td class="drawTime" nowrap="true">2024-07-29 (星期一) 21:30</td>
+                        <td class="name"><span class="ico b32">32</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b45">45</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b09">09</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b27">27</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b12">12</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b43">43</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b20">20</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">中</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">188</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name blue02">蓝</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024210</td>
+                        <td class="drawTime" nowrap="true">2024-07-28 (星期日) 21:30</td>
+                        <td class="name"><span class="ico b33">33</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b25">25</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b24">24</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b07">07</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b14">14</span></td>
+                        <td class="name">兔</td>
+                        <td class="name"><span class="ico b26">26</span></td>
+                        <td class="name">兔</td>
+                        <td class="name"><span class="ico b19">19</span></td>
+                        <td class="name">狗</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">中</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">148</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name red02">红</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024209</td>
+                        <td class="drawTime" nowrap="true">2024-07-27 (星期六) 21:30</td>
+                        <td class="name"><span class="ico b21">21</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b46">46</span></td>
+                        <td class="name">羊</td>
+                        <td class="name"><span class="ico b05">05</span></td>
+                        <td class="name">鼠</td>
+                        <td class="name"><span class="ico b29">29</span></td>
+                        <td class="name">鼠</td>
+                        <td class="name"><span class="ico b39">39</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b12">12</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b33">33</span></td>
+                        <td class="name">猴</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">185</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name green02">绿</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024208</td>
+                        <td class="drawTime" nowrap="true">2024-07-26 (星期五) 21:30</td>
+                        <td class="name"><span class="ico b42">42</span></td>
+                        <td class="name">猪</td>
+                        <td class="name"><span class="ico b28">28</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b03">03</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b11">11</span></td>
+                        <td class="name">马</td>
+                        <td class="name"><span class="ico b05">05</span></td>
+                        <td class="name">鼠</td>
+                        <td class="name"><span class="ico b13">13</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b04">04</span></td>
+                        <td class="name">牛</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">106</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name blue02">蓝</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024207</td>
+                        <td class="drawTime" nowrap="true">2024-07-25 (星期四) 21:30</td>
+                        <td class="name"><span class="ico b15">15</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b24">24</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b47">47</span></td>
+                        <td class="name">马</td>
+                        <td class="name"><span class="ico b01">01</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b05">05</span></td>
+                        <td class="name">鼠</td>
+                        <td class="name"><span class="ico b11">11</span></td>
+                        <td class="name">马</td>
+                        <td class="name"><span class="ico b18">18</span></td>
+                        <td class="name">猪</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">中</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">121</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name red02">红</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024206</td>
+                        <td class="drawTime" nowrap="true">2024-07-24 (星期三) 21:30</td>
+                        <td class="name"><span class="ico b26">26</span></td>
+                        <td class="name">兔</td>
+                        <td class="name"><span class="ico b11">11</span></td>
+                        <td class="name">马</td>
+                        <td class="name"><span class="ico b43">43</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b31">31</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b36">36</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b16">16</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b14">14</span></td>
+                        <td class="name">兔</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">177</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name blue02">蓝</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024205</td>
+                        <td class="drawTime" nowrap="true">2024-07-23 (星期二) 21:30</td>
+                        <td class="name"><span class="ico b10">10</span></td>
+                        <td class="name">羊</td>
+                        <td class="name"><span class="ico b25">25</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b30">30</span></td>
+                        <td class="name">猪</td>
+                        <td class="name"><span class="ico b16">16</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b07">07</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b42">42</span></td>
+                        <td class="name">猪</td>
+                        <td class="name"><span class="ico b40">40</span></td>
+                        <td class="name">牛</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name undefined">170</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name red02">红</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024204</td>
+                        <td class="drawTime" nowrap="true">2024-07-22 (星期一) 21:30</td>
+                        <td class="name"><span class="ico b27">27</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b30">30</span></td>
+                        <td class="name">猪</td>
+                        <td class="name"><span class="ico b03">03</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b34">34</span></td>
+                        <td class="name">羊</td>
+                        <td class="name"><span class="ico b31">31</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b04">04</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b05">05</span></td>
+                        <td class="name">鼠</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">134</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name green02">绿</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024203</td>
+                        <td class="drawTime" nowrap="true">2024-07-21 (星期日) 21:30</td>
+                        <td class="name"><span class="ico b11">11</span></td>
+                        <td class="name">马</td>
+                        <td class="name"><span class="ico b31">31</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b12">12</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b20">20</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b09">09</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b48">48</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b45">45</span></td>
+                        <td class="name">猴</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">176</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name red02">红</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024202</td>
+                        <td class="drawTime" nowrap="true">2024-07-20 (星期六) 21:30</td>
+                        <td class="name"><span class="ico b33">33</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b04">04</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b23">23</span></td>
+                        <td class="name">马</td>
+                        <td class="name"><span class="ico b11">11</span></td>
+                        <td class="name">马</td>
+                        <td class="name"><span class="ico b19">19</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b29">29</span></td>
+                        <td class="name">鼠</td>
+                        <td class="name"><span class="ico b43">43</span></td>
+                        <td class="name">狗</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">162</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name green02">绿</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024201</td>
+                        <td class="drawTime" nowrap="true">2024-07-19 (星期五) 21:30</td>
+                        <td class="name"><span class="ico b43">43</span></td>
+                        <td class="name">狗</td>
+                        <td class="name"><span class="ico b20">20</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b13">13</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b24">24</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b08">08</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b40">40</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b25">25</span></td>
+                        <td class="name">龙</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">中</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_h">和</td>
+                        <td class="name undefined">173</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name blue02">蓝</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024200</td>
+                        <td class="drawTime" nowrap="true">2024-07-18 (星期四) 21:30</td>
+                        <td class="name"><span class="ico b10">10</span></td>
+                        <td class="name">羊</td>
+                        <td class="name"><span class="ico b49">49</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b46">46</span></td>
+                        <td class="name">羊</td>
+                        <td class="name"><span class="ico b28">28</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b01">01</span></td>
+                        <td class="name">龙</td>
+                        <td class="name"><span class="ico b15">15</span></td>
+                        <td class="name">虎</td>
+                        <td class="name"><span class="ico b43">43</span></td>
+                        <td class="name">狗</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">192</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name green02">绿</td>
+                    </tr>
+                    <tr>
+                        <td class="period">2024199</td>
+                        <td class="drawTime" nowrap="true">2024-07-17 (星期三) 21:30</td>
+                        <td class="name"><span class="ico b20">20</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b04">04</span></td>
+                        <td class="name">牛</td>
+                        <td class="name"><span class="ico b35">35</span></td>
+                        <td class="name">马</td>
+                        <td class="name"><span class="ico b36">36</span></td>
+                        <td class="name">蛇</td>
+                        <td class="name"><span class="ico b45">45</span></td>
+                        <td class="name">猴</td>
+                        <td class="name"><span class="ico b08">08</span></td>
+                        <td class="name">鸡</td>
+                        <td class="name"><span class="ico b15">15</span></td>
+                        <td class="name">虎</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name ds_s">双</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name dx_d">大</td>
+                        <td class="name undefined">163</td>
+                        <td class="name ds_d">单</td>
+                        <td class="name dx_x">小</td>
+                        <td class="name blue02">蓝</td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <div id="pager" class="clear">
+                <ul class="pages">
+                    <li class="pgNext pgEmpty">首页</li>
+                    <li class="pgNext pgEmpty">上一页</li>
+                    <li class="page-number pgCurrent">1</li>
+                    <li class="page-number">2</li>
+                    <li class="page-number">3</li>
+                    <li class="page-number">4</li>
+                    <li class="page-number">5</li>
+                    <li class="page-number">6</li>
+                    <li class="page-number">7</li>
+                    <li class="page-number">8</li>
+                    <li class="page-number">9</li>
+                    <li class="pgNext">下一页</li>
+                    <li class="pgNext">最后一页</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="/default/pagerscript.min.js?v=JPw9Uoh3uTGGUhvgJjXixukNHteucMk5w7WWFCDQr_o"></script>
+
+
+    <script>
+
+        page = "NMCHK6";
+        lotteryTime = "2024-08-06";
+        templateCode = "HK6";
+    </script>
+    <script src="/default/js/lotteryHistory.js?v=f-vRbobX09UZUvLZZXuA_cIkDNZUGv_5XKruxQXlku8"></script>
+    <script>
+        needRndNum = "0";
+        hidePager = false;
+        ftType = 0;
+    </script>
+
+
+</body>
+
+</html>

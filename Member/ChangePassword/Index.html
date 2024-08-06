@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>hhyc001 修改密码</title>
+    <link href="/default/css/main.css" rel="stylesheet">
+
+    
+    
+        <link href="/default/css/Skins/blue/skinbd.min.css?v=gmfBlE7fVRr1KWpaCz8MRaX0gZX6nFDYDtPDPKrgpfs" type="text/css" rel="stylesheet">
+    
+    <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/js/libs.js"></script>
+    <script type="text/javascript" src="/default/js/password.js?v=004"></script>
+    <script type="text/javascript">
+        var _root = "";
+        var _urlParams = "";
+    </script>
+</head>
+<body style="">
+    <div class="main password pad10">
+        <form action="/Member/ChangePassword" method="POST">
+
+            <div class="contents jt-container">
+                <div class="bar_tit">
+                    <b>修改密码</b>
+                </div>
+                <table class="list user_info pass_panel input_panel table_ball">
+                    <tbody><tr class=""><th>原始密码</th><td style="text-align: left"><input id="oldPassword" name="oldpasswd" type="password" required="required" class="input"></td></tr>
+                    <tr class=""><th>新设密码</th><td style="text-align: left"><input id="password" name="newpasswd" type="password" required="required" class="input"></td></tr>
+                    <tr><th>确认密码</th><td style="text-align: left"><input id="ckPassword" name="confirmpasswd" type="password" required="required" class="input"></td></tr>
+
+                </tbody></table>
+            </div>
+            <div class="data_footer">
+                <div class="control">
+                    <input style="cursor:pointer;" type="submit" class="button" value="确定">
+                    <input style="cursor:pointer;" type="reset" class="button" value="重置">
+                    <input style="cursor:pointer;" type="button" onclick="window.location.href = '/Member/Logout'" class="button" value="返回">
+
+                </div>
+                <div class="control" style="color: red">
+                    
+                </div>
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8GCtwr74-u1BlyQAmBuwJCZWX-TINgdf-oDPQ86a_ZA3HRKpVCyMufr0lOMtuwRIUrvFI8pzR-KSlY5cCCIvg7f3pCV2B15oXlxwdZq0VI2OJV5ynJZbMKPYELSrkh8LfaqyImxx_sXu223890zxVf8"></form>
+
+
+    </div>
+
+</body></html>
