@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="user-scalable=yes, target-densityDpi=device-dpi">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>UnCheckBetting</title>
+
+   
+
+    
+
+
+    <link href="../default/css/layoutbl.min.css" type="text/css" rel="stylesheet">
+    <link href="../js/jquery/new/jqueryuib.min.css" type="text/css" rel="stylesheet">
+    <link href="../default/css/Skins/blue/skinbd.min.css" type="text/css" rel="stylesheet">
+    <script src="../js/jquerybundle.min.js"></script>
+
+
+
+
+    
+    <script type="text/javascript">
+        var _root = "";
+        var _urlParams = "";
+    </script>
+</head>
+<body class="L_HK6 skin_blue">
+    
+
+
+
+
+    <script src="../default/pagerscript.min.js"></script>
+
+<style type="text/css">
+    .AutoNewline { word-break: break-all; /*必须*/ width: 350px; }
+
+    .list tbody tr:nth-child(even) { background-color: #ffffff; }
+
+    .list tbody .hover td, .list tbody .hover:nth-child(even) { background: rgb(255,255,198); }
+    .table_ball td { height: 40px; }
+</style>
+
+<script language="javascript">
+    var __digitalNum = "2" - 0;
+    var _winPoint = "2" - 0;
+    var betUrl = _root + "/BettingList/getUncheckBetList";
+    $(function () {
+        betList.loadUnCheck();
+    });
+</script>
+
+<div id="containers" class="containers main report jt-container pad10">
+    <div class="bar_tit">
+        <b>未结明细</b>
+    </div>
+    <table class="list table table_zh2 table_ball">
+        <thead>
+            <tr class="t12">
+                <th width="102" height="20">
+                    单号
+                </th>
+                <th width="131">
+                    下注时间
+                </th>
+                <th width="50">
+                    类型
+                </th>
+                <th width="216">
+                    下注内容@赔率
+                </th>
+                <th width="82">
+                    盘口
+                </th>
+                <th width="82">
+                    下注金额
+                </th>
+                <th width="82">
+                    退水(%)
+                </th>
+                <th width="83">
+                    可赢金额
+                </th>
+
+            </tr>
+        </thead>
+        <tbody id="betList"></tbody>
+        <tfoot id="footer">
+        </tfoot>
+    </table>
+
+    <div id="pager"></div>
+</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,465 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=yes, width=1225, target-densityDpi=device-dpi">
+    <meta name="renderer" content="webkit">
+    <title> Welcome</title>
+    
+
+
+    <link href="./default/css/adminbd.min.css" type="text/css" rel="stylesheet">
+    <link href="./js/jquery/new/jqueryuib.min.css" type="text/css" rel="stylesheet">
+    <link id="lotStyle" href="./default/css/Skins/darkyellow/skinbd.min.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquerybundle.min.js"></script>
+    <script type="text/javascript" src="./default/adminscript.min.js"></script>
+ 
+    <style>
+        .ios { -webkit-overflow-scrolling: touch; overflow: auto; }
+
+        .foot_box { position: relative; min-width: 1225px; background: url(../default/images/marquebg.png) repeat-x; border-bottom: 1px solid #b5c6e2; border-top: 1px solid #b5c6e2; line-height: 25px; text-indent: 3px; }
+
+        .foot_box .more_c { position: absolute; right: 18px; top: 0; color: #684716; }
+
+        .foot_box .info { padding-right: 65px; }
+
+        .foot_box .info > marquee > span { color: #f54b00; }
+
+        .foot_box .info > marquee > span:not(:first-child) { margin-left: 50px; }
+    </style>
+    <style type="text/css">
+        @keyframes arrowAnimation {
+            from { transform: translateY(-5%) scaleY(0.8); }
+
+            to { transform: translateY(5%) scaleY(0.8); }
+        }
+
+        #dialog_open, #layer { width: 100%; height: 100%; margin: 0; padding: 0 !important; overflow: hidden; }
+
+        .dialog_iframe { width: 100%; height: 100%; margin: 0; padding: 0; }
+
+        .show_games { position: absolute; left: 40px; display: inline-block; }
+
+        .new-card-games { display: inline-block; height: 38px; width: auto; color: #fff; padding-left: 8px; padding-right: 8px; top: 0; left: 38px; z-index: 9; background: url(/default/images/blue/nav_shuxian.png) no-repeat right 9px; }
+
+        .new-card-games div { float: left; cursor: pointer; }
+
+        .card-game { padding: 10px 5px 10px 20px; font-size: 13px; }
+
+        .card-game-icon { margin: 13px 10px 10px 5px; animation: arrowAnimation 200ms ease-in-out infinite alternate; text-shadow: 0 2px 5px #00a6e8; }
+
+        .card-game-icon:before { content: "▼"; position: absolute; top: -5px; right: 0; bottom: 0; left: 0; width: 0; height: 0; color: #00aaea; animation-delay: 200ms; z-index: -1; }
+
+        .new-card-games-container { background-color: #e7e7e7; display: none; position: absolute; top: 38px; width: 1100px; height: auto; padding: 0 15px 10px 15px; z-index: 25 }
+
+        .gamebox2 { padding: 25px 25px; background-color: #fff; border: 1px solid #ccc; font-size: 13px; display: none; height: auto; margin-top: 5px; border-top: none; }
+
+        .new-single-game-item { display: inline-block; background-size: contain !important; background-repeat: no-repeat !important; overflow: hidden; background-position: center !important; width: 125px !important; height: 125px !important; position: relative; }
+
+        .new-single-game-item:hover { background-color: #ececec !important; }
+    </style>
+    <script>
+        var _drawSitesBase=[{"LotteryType":"HK6","KJSiteUrl":"https://le66.co/","ZpSiteUrl":""},{"LotteryType":"MCHK6","KJSiteUrl":"https://166live.com/live-m6-a.html","ZpSiteUrl":""},{"LotteryType":"NMCHK6","KJSiteUrl":"","ZpSiteUrl":""}];
+        var baseUrl = "";
+        var _root = "";
+        var SOUND_URL = '/default/css/images/kaijiang.mp3';
+        lotteryType = "NMCHK6";
+        _topTemplateCode= "HK6";
+        _kjHost = "";
+        userloginId = "hhyc001";
+        _ShengXiaoYear = "&#x9F99;";
+        var _urlParams = "uid=72637fc312944e73ba16e9f089eed744&amp;loginId=hhyc001";
+        var MAX_DIVIDEND = 5000000;
+        var _winPoint = "2"-0 ;//最新注单可赢金额保留小数位
+        _sumpoint = "0"-0 ;//最新注单可赢金额保留小数位
+        var sumResult = 0.0;//最新注单合计金额
+        RERESH_ONLINE = "120" - 0;
+        RERESH_INSTALLMENTS = "20" - 0;
+        RERESH_ACCOUNT = "20" - 0;
+        _defaultUserSkin = "blue";
+        UseState = "1" - 0;
+          _lotterySkinTheme = {"HK6":"blue","MCHK6":"orange","NMCHK6":"darkyellow"};
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".new-card-games,.new-card-games-container").mouseover(function () {
+                var product = $(this).attr("product");
+                $(".new-card-games[product = " + product + "]").addClass("selected");
+                $(".new-card-games-container[product=" + product + "]").show();
+            }).mouseleave(function () {
+                var product = $(this).attr("product");
+                $(".new-card-games[product = " + product + "]").removeClass("selected");
+                $(".new-card-games-container[product=" + product + "]").hide();
+            });
+        });
+    </script>
+    <script src="/js/jquery-ui-dialog.js"></script>
+</head>
+<body class="skin_blue" style="">
+    <div class="index-container">
+        <div class="header" style="">
+            <div class="top_w">
+                <div class="logo">
+                    <img src="data:image/png;base64,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" style="width:160px;height:60px">
+                </div>
+
+                <div class="top_box">
+                    <div class="menu1">
+                        <div id="result_info" class="draw_number">
+                            <div id="resultLotName">
+                                        <span>新澳门六合彩</span>
+                                    </div>
+                            <div id="divResultInstallNo">2024217期开奖</div>
+                        </div>
+                        <a id="result_balls" href="/Home/RedirectLink?LotteryType=NMCHK6" class="T_HK6"><span><b class="b22">22</b><i>羊</i></span><span><b class="b37">37</b><i>龙</i></span><span><b class="b49">49</b><i>龙</i></span><span><b class="b18">18</b><i>猪</i></span><span><b class="b11">11</b><i>马</i></span><span><b class="b30">30</b><i>猪</i></span><span class="plus">+</span><span><b class="b15">15</b><i>虎</i></span></a>
+                    </div>
+                </div>
+
+                <div class="top_menu">
+                    <a target="frame" href="/BettingList/UnCheckBetting">
+                        <p>未结明细</p>
+                    </a>
+                    <a href="/BettingList/CheckedBetting" target="frame">
+                        <p>今日已结</p>
+                    </a>
+                    <a href="/BettingList/HistoryBetList" target="frame">
+                        <p>报表查询</p>
+                    </a>
+                    <a href="/ResultHistory/Index?page=NMCHK6" id="resultHisList" target="frame">
+                        <p>开奖结果</p>
+                    </a>
+                    <a target="frame" href="/Member/info">
+                        <p>个人资讯</p>
+                    </a>
+                    <a href="/GameRule/Index?page=NMCHK6&amp;show=true" id="resultRule" target="frame">
+                        <p>活动规则</p>
+                    </a>
+                    <a target="frame" href="/Member/ChangePassword">
+                        <p>修改密码</p>
+                    </a>
+                    <a href="/Member/Logout?id=72637fc312944e73ba16e9f089eed744" class="logout">
+                        <p>退出系统</p>
+                    </a>
+                </div>
+            </div>
+
+                <div class="lotterys clear" style=" ">
+                    <div class="menucontainer">
+                        <div class="spritearrow arrowup"></div>
+                        <div class="show_games">
+
+                        </div>
+
+                        <div id="lotterys" style="display: none">
+                                    
+                                    
+                                    
+
+                        </div>
+                        <div class="show">
+                            <ul class="items" id="items"><li><div class="item"><a href="javascript:void(0)" id="l_NMCHK6" lang="HK6_0" rel="0" class="selected" accounttype="2" onclick="setTab('NMCHK6','HK6',this)">
+                                        <span>新澳门六合彩</span>
+                                    </a><div class="removebtn"></div></div></li><li><div class="item"><a href="javascript:void(0)" id="l_MCHK6" lang="HK6_1" rel="1" class="" accounttype="2" onclick="setTab('MCHK6','HK6',this)">
+                                        <span>老澳門六合彩</span>
+                                    </a><div class="removebtn"></div></div></li><li><div class="item"><a href="javascript:void(0)" id="l_HK6" lang="HK6_2" rel="2" class="" accounttype="2" onclick="setTab('HK6','HK6',this)">
+                                        <span>香港六合彩</span>
+                                    </a><div class="removebtn"></div></div></li></ul>
+                        </div>
+                        <div class="menumoregame" style="display: none;">
+                            <div id="moregameicon">更多彩种</div>
+                        </div>
+                    </div>
+
+                    <div class="gamecontainer">
+                        <div style="height: 10px;"></div>
+                        <div class="gamebox clearfix" style="display:block">
+                        </div>
+
+                        <div class="gamesmltxt">
+                            注：已选择的彩种可通过鼠标拖动改变排列顺序。
+                        </div>
+                        <div class="editon">
+                            <button class="gamebtn1">编辑</button>
+                        </div>
+                        <div class="editoff" style="display: none">
+                            <button class="gamebtn2">取消</button>
+                            <button class="gamebtn1">确定</button>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="sub_box">
+
+
+<div id="child_NMCHK6" class="hover submenu" style="display: block;">
+    <ul>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=tm" class="c_curr" target="frame">特码</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=lm" target="frame">两面</a>
+        </li>
+        <li>
+
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=sb" target="frame">色波</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=tx_12sx" target="frame">特肖头尾数</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=hx" target="frame">合肖</a>
+        </li>
+
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=zma" target="frame">正码</a>
+        </li>
+
+            <li>
+                <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=zmt" target="frame">正码特</a>
+            </li>
+            <li>
+                <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=zmt&amp;abType=B" target="frame">正码特B</a>
+            </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=zm16" target="frame">正码1-6</a>
+        </li>
+
+
+
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=wx" target="frame">五行7色波</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=yxws" target="frame">平特一肖尾数</a>
+        </li>
+            <li>
+                <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=yxbz" target="frame">一肖不中</a>
+            </li>
+                    <li>
+                <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=wsbz" target="frame">尾数不中</a>
+            </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=zx" target="frame">正肖总肖</a>
+        </li>
+
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=zxbz" target="frame">自选不中</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=lx" target="frame">连肖</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=lw" target="frame">连尾</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=NMCHK6&amp;page=lma" target="frame">连码</a>
+        </li>
+    </ul>
+
+</div>
+<div id="child_MCHK6" class="hover submenu" style="display: none">
+    <ul>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=tm" class="" target="frame">特码</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=lm" target="frame">两面</a>
+        </li>
+        <li>
+
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=sb" target="frame">色波</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=tx_12sx" target="frame">特肖头尾数</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=hx" target="frame">合肖</a>
+        </li>
+
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=zma" target="frame">正码</a>
+        </li>
+
+            <li>
+                <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=zmt" target="frame">正码特</a>
+            </li>
+            <li>
+                <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=zmt&amp;abType=B" target="frame">正码特B</a>
+            </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=zm16" target="frame">正码1-6</a>
+        </li>
+
+
+
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=wx" target="frame">五行7色波</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=yxws" target="frame">平特一肖尾数</a>
+        </li>
+            <li>
+                <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=yxbz" target="frame">一肖不中</a>
+            </li>
+                    <li>
+                <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=wsbz" target="frame">尾数不中</a>
+            </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=zx" target="frame">正肖总肖</a>
+        </li>
+
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=zxbz" target="frame">自选不中</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=lx" target="frame">连肖</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=lw" target="frame">连尾</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=MCHK6&amp;page=lma" target="frame">连码</a>
+        </li>
+    </ul>
+
+</div>
+<div id="child_HK6" class="hover submenu" style="display: none">
+    <ul>
+        <li>
+            <a href="./特码.html" class="" target="frame">特码</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=lm" target="frame">两面</a>
+        </li>
+        <li>
+
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=sb" target="frame">色波</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=tx_12sx" target="frame">特肖头尾数</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=hx" target="frame">合肖</a>
+        </li>
+
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=zma" target="frame">正码</a>
+        </li>
+
+            <li>
+                <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=zmt" target="frame">正码特</a>
+            </li>
+            <li>
+                <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=zmt&amp;abType=B" target="frame">正码特B</a>
+            </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=zm16" target="frame">正码1-6</a>
+        </li>
+
+
+
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=wx" target="frame">五行7色波</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=yxws" target="frame">平特一肖尾数</a>
+        </li>
+            <li>
+                <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=yxbz" target="frame">一肖不中</a>
+            </li>
+                <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=zx" target="frame">正肖总肖</a>
+        </li>
+
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=zxbz" target="frame">自选不中</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=lx" target="frame">连肖</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=lw" target="frame">连尾</a>
+        </li>
+        <li>
+            <a href="/PlaceBet/Index?lotteryType=HK6&amp;page=lma" target="frame">连码</a>
+        </li>
+    </ul>
+
+</div>            </div>
+        </div>
+        <div id="middle-content" class="middle-content clear" style="">
+
+            <div class="sider-left floatL" id="menuleft" style="-webkit-overflow-scrolling:touch;">
+                <div class="left_menu" id="mainMenuLeft">
+                    <div class="acc_box">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody><tr>
+                                <td align="right">会员帐号：</td>
+                                <td>
+                                    <span>hhyc001</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">盘口类型：</td>
+
+                                    <td class="rde_font" nowrap="nowrap">
+                                        <div class="pk_con">
+                                                    <li class="p_curr">A</li>
+                                        </div>
+                                    </td>
+
+                            </tr>
+                            <tr style="display:none">
+                                <td align="right">信用额度：</td>
+                                <td class="rde_font"><span class="balance">0</span></td>
+                            </tr>
+                                                                    <tr class="userAccType">
+                                            <td align="right" nowrap="nowrap">低频彩额度：</td>
+                                            <td class="rde_font" nowrap="nowrap">
+                                                <span id="accountLimit_2" title="0">0</span>
+                                            </td>
+                                        </tr>
+                                <tr class="userAccType">
+                                    <td align="right" nowrap="nowrap">未结金额：</td>
+                                    <td class="rde_font" id="unSettleAmount">0</td>
+                                </tr>
+
+
+                        </tbody></table>
+                    </div>
+                                                                                                    <div class="left_tab" style="cursor:pointer;">
+                        <a id="two1" href="javascript:void(0);" show="LastBet" title="只显示最近15条注单" class="hover">最新注单</a>
+                    </div>
+                    <div class="left_con" id="left_con" style="max-height: 542px;">
+                        <div class="item" id="con_two_1" style="display: block;">
+
+                            <div class="lastbet"><div style="height: 100px; font-size: 26px; text-align: center; line-height: 100px; " class="noBet">暂无注单</div></div>
+
+
+                            <div class="betting" style="display: none;">
+
+                            </div>
+                        </div>
+                        <div class="item word_wrap hover" id="con_two_2" style="cursor:pointer" title="点击查看更多公告详情">
+
+                        </div>
+                    </div>
+
+                <a href="https://nizb.xyz/24D7h" target="_blank" id="Fb_EU_Cup_Ad"></a></div>
+            </div>
+            <div id="content" class="content" style="overflow-y: hidden; padding-left: 220px;">
+                <iframe src="" id="frame" name="frame" width="100%" height="100%" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="foot_box">
+        <div class="info"><marquee scrollamount="2"><span>通知：新澳门六合彩三全中包含（12*16*35，
+23*41*48，
+13*24*45，
+07*23*45，
+24*35*45，
+12*23*35）的所有注单注销，会员不得有任何异议，谢谢合作。</span><span style="margin-left:1300px">通知！即日起新澳门六合彩，特马封盘时间调整为21:15  非特封盘时间调整为20:00，  如有变动另行通知，外面有传言,新澳门开奖号码有可能会开出多个版本,万一出现开奖号码开出多个版本,一切以盘口开出的号码为准,如有疑问请各位会员不要下注!!!!</span><span style="margin-left:1300px">紧急通知：
+由于开奖方系统升级无法投注，为保障并维护各级代理的利益，避免被收割，166系统新澳门六合彩今日暂停投注，并删除已下注订单，具体开启时间待定。其余彩种均可正常投注。还请知悉并互相转告，给您造成不便敬请谅解！</span></marquee></div>
+        <a href="javascript:void(0)" class="more_c">更多</a>
+    </div>
+
+
+</body></html>
