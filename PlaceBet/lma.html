@@ -1,0 +1,376 @@
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <title>Welcome</title>
+
+    
+
+
+
+    <link href="/default/css/bettingm.min.css?v=DcCUxZM3DtlNJb5dgK3f_WfCSGX2ktl2UYwQpqUHKNo" type="text/css" rel="stylesheet" />
+    <link href="/js/jquery/new/jqueryuib.min.css?v=mxSAsHUP7hLKeL0BgaVt6Ob2wiMcK2DLkqVAg-qNK8g" type="text/css" rel="stylesheet" />
+    <link id="lotBetPageStyle" href="/default/css/Skins/darkyellow/skinbd.min.css?v=IrhXvswFheqXNgLiUiJGNTtm9uhSm5DqzPCV2euxOMo" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquerybundle.min.js?v=FQWwpeVYaorYmn-g02pSdU5X2Ez4zjgdteveRIg_Zig"></script>
+    <script type="text/javascript" src="/default/bettingscript.min.js?v=FYAmdsxM3xHUUZbLDCEPDUgoZMPs87VthS-4zJH4LZw"></script>
+
+
+    <style>
+    </style>
+    <!--  -->
+    <script>
+
+        var baseUrl = "";
+        var closePKSound =baseUrl+ '/default/media/du.mp3';
+        var _root = baseUrl;
+        var _lotteryType = "NMCHK6";
+        var _temploateCode = "HK6";
+        var _needRndNum = "0";
+        var page = "lw";
+        var hk6GameType = 'A';
+        var _userId = "72637fc312944e73ba16e9f089eed744";
+        var _currentSx = "龙";
+        var Installments = "2024219";
+
+        var contextPath = baseUrl;
+        var currentPk = {"Installments":"2024219","LotteryResult":null,"State":3,"CloseTimeStamp":0,"OpenTimeStamp":0,"PreLotteryResult":"47,05,40,12,42,09,14","ResultOther":null,"PreInstallments":"2024219","PreShengXiaoYear":"龙","TodayWinLost":null,"TemplateCode":"HK6","RndNum":null};
+        var oddsSetting;
+        var zodiacValue = _currentSx;
+        var __inidata = function (fuc) { fuc && fuc(); };
+        var __refresh = function (fuc) { fuc && fuc(); };
+        var showLmOdds="1";
+        var strTime="2024-08-06 22:25:43";
+        RERESH_ODDS= "30" - 0;
+        BETTING_NUM = "";
+        G_isHk6Type="1"-0;
+        $(function(){
+            parent.topTo();
+            parent.scrollTo(0, 0);
+        });
+
+    </script>
+
+</head>
+<body class="L_NMCHK6">
+    
+
+
+<div class="jt-container pad10 hk6">
+    
+
+
+<div id="right">
+    <table id="changlong" class="table_ball" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th colspan="2" class="table_side" title="点击长龙名称可快捷选中当前项投注">
+                    两面长龙排行 <span class="tip" title="点击长龙名称可快捷选中当前项投注">?</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <table id="drawLot" class="table_ball fastview" style="display:none;" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th class="table_side">
+                    近20期开奖走势
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+
+
+</div>
+
+
+    <div id="main">
+        
+<div id="header">
+    <div class="lottery_info">
+        <div class="lottery_info_left floatleft">
+            <span class="gameName" id="gameName">--</span>
+
+            <span class="result">&nbsp;今日输赢：<span id="bresult"><font>0</font></span></span>
+
+        </div>
+        <div class="lottery_info_right floatright" id="lottery_info">
+            <span id="drawNumber">--</span>期
+            <span class="cdContainer">&nbsp;&nbsp;距离封盘：<span class="color_lv bold"><span id="cdClose">00:00</span></span></span>
+            <span class="cdContainer" style="display: none">&nbsp;&nbsp;距开盘：<span class="color_lv bold" style="display: none;"><span id="cdOpen">00:00</span></span></span> &nbsp;&nbsp;距离开奖：
+            <span class="color_lv bold"><span id="cdDraw">00:00</span></span>
+            <span class="cdContainer" style="display:none;">&nbsp;&nbsp;随机挂码：<span class="color_lv bold"><span id="cdRnNum">00</span></span></span>
+            <span id="cdRefresh" style="float: right; width: 70px;">10秒</span>
+        </div>
+        <div class="clearfloat"></div>
+    </div>
+    <div id="betListForm" style="display: none" title="投注"></div>
+    <div id="betform" style="display: none" title="投注"></div>
+</div>
+        <div id="bet_panel" class="bet_panel input_panel hk6">
+
+            
+<script type="text/javascript">
+    //投注betformId,betListFormId,btnResetId,totalId,oddsSetting
+    var _islwZong="1"==1;
+    var _lw;
+    var _mid = "&#x4E8C;&#x5C3E;";
+    $(document).ready(
+        function () {
+            PeriodPanel && PeriodPanel.drawNumberPanel.html(Installments);
+            $("#gameName").html("连尾");
+            _lw = lwBetting.createNew("betform", "betListForm", "btnReset",
+                "oddsListId");
+            _lw.oddUIOkClick = _lw.btnOkClick;
+            _lw.midName = "&#x4E8C;&#x5C3E;";
+            if (_islwZong) {
+                _lw.findMinOddsValue = _lw.findMaxOddsValue
+            }
+            ShowQuickPancel(2);
+            loadOdds("&#x4E8C;&#x5C3E;");
+            _lw.setNum("2" - 0);
+            _lw.setMidType("&#x4E8C;&#x5C3E;");
+            //初始化多注投注对话框
+            _lw.IniBetDatalist();
+            _lw.setRefreshUrl(betbase.refreshDataUrl); ///website/betting/Refreshodds
+            // 				setTimeout("_lw.refresh()",betbase.refreshTime);
+
+        });
+
+    function loadOdds(type) {
+        _lw.loadOddsData(betbase.loadDataUrl, {
+          midCode: "L2LW"
+        }, 5);
+    }
+</script>
+
+
+
+<ul class="tab">
+    <li class="tab_title02">
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=lw&tpage=lw2&pk=A" class="on" num="2" value="二尾">二尾</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=lw&tpage=lw3&pk=A" class="" num="3" value="三尾">三尾</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=lw&tpage=lw4&pk=A" class="" num="4" value="四尾">四尾</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=lw&tpage=lwbz2&pk=A" class="" num="2" value="二尾不中">二尾不中</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=lw&tpage=lwbz3&pk=A" class="" num="3" value="三尾不中">三尾不中</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=lw&tpage=lwbz4&pk=A" class="" num="4" value="四尾不中">四尾不中</a>
+
+    </li>
+
+</ul>
+<table class="table_ball jj01">
+
+    <tr>
+        <th style="width:90px">
+            投注方式：&nbsp;&nbsp;
+        </th>
+        <td style="text-align: left">
+            
+
+<span id="lianXiao">
+
+    <label class="bg01">
+        <input type="radio" name="playmethod" id="lianPeng" checked disabled="disabled" value="1" class="playmethod" />连碰
+    </label>
+    <label class="bg01">
+        <input name="playmethod" type="radio" id="dantuo" value="2" disabled="disabled" class="playmethod" />胆拖
+    </label>
+
+
+    &nbsp;&nbsp;
+    <span style="display: none" id="dantuoReg">
+        <label id="lblName" class="bg01">胆码数目:</label><input type="text" id="txtDmNum" class="hint" size="10" placeholder="请输入胆码数目"
+                                                             onkeypress="return OnlyInt(event)" size="10" />
+        <b><span style="color: red">请先填写胆码数目，再按所填数值选择胆码，之后选择拖码！</span></b>
+    </span>
+
+</span>
+            &nbsp;&nbsp;<b><span style="color: red" id="chooseItemDan"></span></b>
+
+
+        </td>
+    </tr>
+</table> 
+
+
+
+<div class="status_panel">
+    <table class="table_ball jj01">
+        <thead>
+            <tr>
+                <th>尾数</th>
+                <th width="8%">赔率</th>
+                <th width="8%">选择</th>
+                <th>尾数</th>
+                <th width="8%">赔率</th>
+                <th width="8%">选择</th>
+                <th>尾数</th>
+                <th width="8%">赔率</th>
+                <th width="8%">选择</th>
+                <th>尾数</th>
+                <th width="8%">赔率</th>
+                <th width="8%">选择</th>
+                <th>尾数</th>
+                <th width="8%">赔率</th>
+                <th width="8%">选择</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="name ">
+                    <label for="enabled_L2LW1">
+                        0尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW1" class="odds"><label for="enabled_L2LW1" id="L2LW1"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW1" style="zoom: 95%; width: 20px" title="选择" value="0尾" class="chooseOdds" type="checkbox"></td>
+                <td class="name ">
+                    <label for="enabled_L2LW3">
+                        2尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW3" class="odds"><label for="enabled_L2LW3" id="L2LW3"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW3" style="zoom: 95%; width: 20px" title="选择" value="2尾" class="chooseOdds" type="checkbox"></td>
+                <td class="name ">
+                    <label for="enabled_L2LW5">
+                        4尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW5" class="odds"><label for="enabled_L2LW5" id="L2LW5"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW5" style="zoom: 95%; width: 20px" title="选择" value="4尾" class="chooseOdds" type="checkbox"></td>
+                <td class="name ">
+                    <label for="enabled_L2LW7">
+                        6尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW7" class="odds"><label for="enabled_L2LW7" id="L2LW7"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW7" style="zoom: 95%; width: 20px" title="选择" value="6尾" class="chooseOdds" type="checkbox"></td>
+                <td class="name ">
+                    <label for="enabled_L2LW9">
+                        8尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW9" class="odds"><label for="enabled_L2LW9" id="L2LW9"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW9" style="zoom: 95%; width: 20px" title="选择" value="8尾" class="chooseOdds" type="checkbox"></td>
+
+            </tr>
+            <tr>
+                <td class="name ">
+                    <label for="enabled_L2LW2">
+                        1尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW2" class="odds"><label for="enabled_L2LW2" id="L2LW2"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW2" style="zoom: 95%; width: 20px" title="选择" value="1尾" class="chooseOdds" type="checkbox"></td>
+                <td class="name ">
+                    <label for="enabled_L2LW4">
+                        3尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW4" class="odds"><label for="enabled_L2LW4" id="L2LW4"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW4" style="zoom: 95%; width: 20px" title="选择" value="3尾" class="chooseOdds" type="checkbox"></td>
+                <td class="name ">
+                    <label for="enabled_L2LW6">
+                        5尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW6" class="odds"><label for="enabled_L2LW6" id="L2LW6"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW6" style="zoom: 95%; width: 20px" title="选择" value="5尾" class="chooseOdds" type="checkbox"></td>
+                <td class="name ">
+                    <label for="enabled_L2LW8">
+                        7尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW8" class="odds"><label for="enabled_L2LW8" id="L2LW8"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW8" style="zoom: 95%; width: 20px" title="选择" value="7尾" class="chooseOdds" type="checkbox"></td>
+                <td class="name ">
+                    <label for="enabled_L2LW10">
+                        9尾
+                    </label>
+                </td>
+                <td id="oddsValue_L2LW10" class="odds"><label for="enabled_L2LW10" id="L2LW10"></label></td>
+                <td class="checkClass"><input id="enabled_L2LW10" style="zoom: 95%; width: 20px" title="选择" value="9尾" class="chooseOdds" type="checkbox"></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<div class="sepDiv"></div>
+
+
+<div id="chooseItem" style="display: none;color:red">
+
+</div>
+
+<div class="control bcontrol">
+    <div class="lefts" style="display:none">
+        已经选中
+        <span id="betcount">0</span> 注
+    </div>
+    <div class="buttons">
+        <input type="button" class="button2" value="快选金额" onclick="showsetting()">
+        <label class="checkdefault"><input type="checkbox" name="chkBox" class="checkbox chkDefaultCheck" id="chkDefaultCheck" onclick="setChkDefault();" /><span class="color_lv bold">预设</span></label>&nbsp;&nbsp;
+        <label id="quickAmount" class="quickAmount">
+            <span class="color_lv bold">金额</span>
+            <input id="txtDefaultAmount" class="txtDefaultAmount" onkeypress="return OnlyInt(event)" onkeyup="selectedAmount(this)" value="" />
+        </label>
+        <div class="money_btns chip-amount">
+            <a href="javascript:void(0)" onclick="setAmount(5);">5</a>
+            <a href="javascript:void(0)" onclick="setAmount(10);">10</a>
+            <a href="javascript:void(0)" onclick="setAmount(20);">20</a>
+            <a href="javascript:void(0)" onclick="setAmount(50);">50</a>
+            <a href="javascript:void(0)" onclick="setAmount(100);">100</a>
+            <a href="javascript:void(0)" onclick="setAmount(500);">500</a>
+
+        </div>
+        <input type="button" class="button buttonOk" value="确定" id="btnOk" onclick="betInstance.oddUIOkClick();" />
+        <input type="button" class="button cancel" value="重置" name="cancel" id="btnReset" onclick="betCancel();" />
+    </div>
+</div>
+
+
+
+
+        </div>
+    </div>
+
+
+</div><!--jt-container end-->
+
+    <div id="settingbet" title="快选金额" style="display:none;">
+        <input name="bet_1" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_2" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_3" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_4" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_5" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_6" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_7" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_8" placeholder="快选金额" class="ds" /><br />
+
+        <label>
+            <input name="settingbet" type="radio" id="settingbet_0" value="1" checked="checked" />
+            启动
+        </label>
+        <label>
+            <input name="settingbet" type="radio" id="settingbet_1" value="0" />
+            停用
+        </label>
+        <br />
+        <br />
+
+        <input type="button" class="button" value="储存" onClick="submitsetting()" />
+
+    </div>
+
+</body>
+</html>

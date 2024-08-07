@@ -1,0 +1,647 @@
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <title>Welcome</title>
+
+    
+
+
+
+    <link href="/default/css/bettingm.min.css?v=DcCUxZM3DtlNJb5dgK3f_WfCSGX2ktl2UYwQpqUHKNo" type="text/css" rel="stylesheet" />
+    <link href="/js/jquery/new/jqueryuib.min.css?v=mxSAsHUP7hLKeL0BgaVt6Ob2wiMcK2DLkqVAg-qNK8g" type="text/css" rel="stylesheet" />
+    <link id="lotBetPageStyle" href="/default/css/Skins/darkyellow/skinbd.min.css?v=IrhXvswFheqXNgLiUiJGNTtm9uhSm5DqzPCV2euxOMo" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquerybundle.min.js?v=FQWwpeVYaorYmn-g02pSdU5X2Ez4zjgdteveRIg_Zig"></script>
+    <script type="text/javascript" src="/default/bettingscript.min.js?v=FYAmdsxM3xHUUZbLDCEPDUgoZMPs87VthS-4zJH4LZw"></script>
+
+
+    <style>
+    </style>
+    <!--  -->
+    <script>
+
+        var baseUrl = "";
+        var closePKSound =baseUrl+ '/default/media/du.mp3';
+        var _root = baseUrl;
+        var _lotteryType = "NMCHK6";
+        var _temploateCode = "HK6";
+        var _needRndNum = "0";
+        var page = "zxbz";
+        var hk6GameType = 'A';
+        var _userId = "72637fc312944e73ba16e9f089eed744";
+        var _currentSx = "龙";
+        var Installments = "2024219";
+
+        var contextPath = baseUrl;
+        var currentPk = {"Installments":"2024219","LotteryResult":null,"State":3,"CloseTimeStamp":0,"OpenTimeStamp":0,"PreLotteryResult":"47,05,40,12,42,09,14","ResultOther":null,"PreInstallments":"2024219","PreShengXiaoYear":"龙","TodayWinLost":null,"TemplateCode":"HK6","RndNum":null};
+        var oddsSetting;
+        var zodiacValue = _currentSx;
+        var __inidata = function (fuc) { fuc && fuc(); };
+        var __refresh = function (fuc) { fuc && fuc(); };
+        var showLmOdds="1";
+        var strTime="2024-08-06 22:24:49";
+        RERESH_ODDS= "30" - 0;
+        BETTING_NUM = "";
+        G_isHk6Type="1"-0;
+        $(function(){
+            parent.topTo();
+            parent.scrollTo(0, 0);
+        });
+
+    </script>
+
+</head>
+<body class="L_NMCHK6">
+    
+
+
+<div class="jt-container pad10 hk6">
+    
+
+
+<div id="right">
+    <table id="changlong" class="table_ball" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th colspan="2" class="table_side" title="点击长龙名称可快捷选中当前项投注">
+                    两面长龙排行 <span class="tip" title="点击长龙名称可快捷选中当前项投注">?</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <table id="drawLot" class="table_ball fastview" style="display:none;" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th class="table_side">
+                    近20期开奖走势
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+
+
+</div>
+
+
+    <div id="main">
+        
+<div id="header">
+    <div class="lottery_info">
+        <div class="lottery_info_left floatleft">
+            <span class="gameName" id="gameName">--</span>
+
+            <span class="result">&nbsp;今日输赢：<span id="bresult"><font>0</font></span></span>
+
+        </div>
+        <div class="lottery_info_right floatright" id="lottery_info">
+            <span id="drawNumber">--</span>期
+            <span class="cdContainer">&nbsp;&nbsp;距离封盘：<span class="color_lv bold"><span id="cdClose">00:00</span></span></span>
+            <span class="cdContainer" style="display: none">&nbsp;&nbsp;距开盘：<span class="color_lv bold" style="display: none;"><span id="cdOpen">00:00</span></span></span> &nbsp;&nbsp;距离开奖：
+            <span class="color_lv bold"><span id="cdDraw">00:00</span></span>
+            <span class="cdContainer" style="display:none;">&nbsp;&nbsp;随机挂码：<span class="color_lv bold"><span id="cdRnNum">00</span></span></span>
+            <span id="cdRefresh" style="float: right; width: 70px;">10秒</span>
+        </div>
+        <div class="clearfloat"></div>
+    </div>
+    <div id="betListForm" style="display: none" title="投注"></div>
+    <div id="betform" style="display: none" title="投注"></div>
+</div>
+        <div id="bet_panel" class="bet_panel input_panel hk6">
+
+            
+<script type="text/javascript">
+    //投注betformId,betListFormId,btnResetId,totalId,oddsSetting
+    var _zxbz;
+    $(document).ready(
+        function () {
+            PeriodPanel && PeriodPanel.drawNumberPanel.html(Installments);
+            $("#gameName").html("自选不中");
+            _zxbz = zxbzBetting.createNew("betform", "betListForm", "btnReset",
+                "oddsListId",9);
+            _zxbz.oddUIOkClick = _zxbz.btnOkClick;
+            ShowQuickPancel(4);
+            loadOdds("&#x4E94;&#x4E0D;&#x4E2D;");
+            _zxbz.setNum("5" - 0);
+            _zxbz.midName = "&#x4E94;&#x4E0D;&#x4E2D;";
+            //初始化多注投注对话框
+            _zxbz.IniBetDatalist();
+            _zxbz.setRefreshUrl(betbase.refreshDataUrl);  
+            
+
+
+        });
+
+    function loadOdds(type) {
+        _zxbz.loadOddsData(betbase.loadDataUrl, { midCode:"ZX5BZ"}, 5);
+    }
+</script>
+
+<ul class="tab">
+    <li class="tab_title02">
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=zxbz&pk=A&tpage=zxbz5" class="radSx1 on" num="5" value="五不中" tpage="zxbz5">五不中</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=zxbz&pk=A&tpage=zxbz6" class="radSx1 " num="6" value="六不中">六不中</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=zxbz&pk=A&tpage=zxbz7" class="radSx1 " num="7" value="七不中">七不中</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=zxbz&pk=A&tpage=zxbz8" class="radSx1 " num="8" value="八不中">八不中</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=zxbz&pk=A&tpage=zxbz9" class="radSx1 " num="9" value="九不中">九不中</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=zxbz&pk=A&tpage=zxbz10" class="radSx1 " num="10" value="十不中">十不中</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=zxbz&pk=A&tpage=zxbz11" class="radSx1 " num="11" value="十一不中">十一不中</a>
+        <a href="/PlaceBet/Index?lotteryType=NMCHK6&page=zxbz&pk=A&tpage=zxbz12" class="radSx1 " num="12" value="十二不中">十二不中</a> 
+    </li>
+ 
+</ul>
+<table class="table_ball jj01">
+
+    <tr>
+        <th style="width:90px">
+            投注方式：&nbsp;&nbsp;
+        </th>
+        <td style="text-align: left">
+            
+
+<span id="lianXiao">
+
+    <label class="bg01">
+        <input type="radio" name="playmethod" id="lianPeng" checked disabled="disabled" value="1" class="playmethod" />连碰
+    </label>
+    <label class="bg01">
+        <input name="playmethod" type="radio" id="dantuo" value="2" disabled="disabled" class="playmethod" />胆拖
+    </label>
+
+
+    &nbsp;&nbsp;
+    <span style="display: none" id="dantuoReg">
+        <label id="lblName" class="bg01">胆码数目:</label><input type="text" id="txtDmNum" class="hint" size="10" placeholder="请输入胆码数目"
+                                                             onkeypress="return OnlyInt(event)" size="10" />
+        <b><span style="color: red">请先填写胆码数目，再按所填数值选择胆码，之后选择拖码！</span></b>
+    </span>
+
+</span>
+            &nbsp;&nbsp;<b><span style="color: red" id="chooseItemDan"></span></b>
+
+
+        </td>
+    </tr>
+</table> 
+
+
+
+
+<div class="status_panel">
+    <table class="table_ball jj01">
+        <thead>
+            <tr><th>号码</th><th>赔率</th><th>选择</th><th>号码</th><th>赔率</th><th>选择</th><th>号码</th><th>赔率</th><th>选择</th><th>号码</th><th>赔率</th><th>选择</th><th>号码</th><th>赔率</th><th>选择</th></tr>
+        </thead>
+
+        <tbody>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ1">
+                                        <span class="ico b01">01</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ1" class="odds"><label for="enabled_ZX5BZ1" id="ZX5BZ1"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ1" style="zoom: 95%;width:20px" title="选择" value="01" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ11">
+                                        <span class="ico b11">11</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ11" class="odds"><label for="enabled_ZX5BZ11" id="ZX5BZ11"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ11" style="zoom: 95%;width:20px" title="选择" value="11" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ21">
+                                        <span class="ico b21">21</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ21" class="odds"><label for="enabled_ZX5BZ21" id="ZX5BZ21"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ21" style="zoom: 95%;width:20px" title="选择" value="21" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ31">
+                                        <span class="ico b31">31</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ31" class="odds"><label for="enabled_ZX5BZ31" id="ZX5BZ31"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ31" style="zoom: 95%;width:20px" title="选择" value="31" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ41">
+                                        <span class="ico b41">41</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ41" class="odds"><label for="enabled_ZX5BZ41" id="ZX5BZ41"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ41" style="zoom: 95%;width:20px" title="选择" value="41" class="chooseOdds" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ2">
+                                        <span class="ico b02">02</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ2" class="odds"><label for="enabled_ZX5BZ2" id="ZX5BZ2"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ2" style="zoom: 95%;width:20px" title="选择" value="02" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ12">
+                                        <span class="ico b12">12</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ12" class="odds"><label for="enabled_ZX5BZ12" id="ZX5BZ12"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ12" style="zoom: 95%;width:20px" title="选择" value="12" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ22">
+                                        <span class="ico b22">22</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ22" class="odds"><label for="enabled_ZX5BZ22" id="ZX5BZ22"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ22" style="zoom: 95%;width:20px" title="选择" value="22" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ32">
+                                        <span class="ico b32">32</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ32" class="odds"><label for="enabled_ZX5BZ32" id="ZX5BZ32"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ32" style="zoom: 95%;width:20px" title="选择" value="32" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ42">
+                                        <span class="ico b42">42</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ42" class="odds"><label for="enabled_ZX5BZ42" id="ZX5BZ42"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ42" style="zoom: 95%;width:20px" title="选择" value="42" class="chooseOdds" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ3">
+                                        <span class="ico b03">03</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ3" class="odds"><label for="enabled_ZX5BZ3" id="ZX5BZ3"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ3" style="zoom: 95%;width:20px" title="选择" value="03" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ13">
+                                        <span class="ico b13">13</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ13" class="odds"><label for="enabled_ZX5BZ13" id="ZX5BZ13"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ13" style="zoom: 95%;width:20px" title="选择" value="13" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ23">
+                                        <span class="ico b23">23</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ23" class="odds"><label for="enabled_ZX5BZ23" id="ZX5BZ23"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ23" style="zoom: 95%;width:20px" title="选择" value="23" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ33">
+                                        <span class="ico b33">33</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ33" class="odds"><label for="enabled_ZX5BZ33" id="ZX5BZ33"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ33" style="zoom: 95%;width:20px" title="选择" value="33" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ43">
+                                        <span class="ico b43">43</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ43" class="odds"><label for="enabled_ZX5BZ43" id="ZX5BZ43"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ43" style="zoom: 95%;width:20px" title="选择" value="43" class="chooseOdds" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ4">
+                                        <span class="ico b04">04</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ4" class="odds"><label for="enabled_ZX5BZ4" id="ZX5BZ4"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ4" style="zoom: 95%;width:20px" title="选择" value="04" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ14">
+                                        <span class="ico b14">14</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ14" class="odds"><label for="enabled_ZX5BZ14" id="ZX5BZ14"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ14" style="zoom: 95%;width:20px" title="选择" value="14" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ24">
+                                        <span class="ico b24">24</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ24" class="odds"><label for="enabled_ZX5BZ24" id="ZX5BZ24"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ24" style="zoom: 95%;width:20px" title="选择" value="24" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ34">
+                                        <span class="ico b34">34</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ34" class="odds"><label for="enabled_ZX5BZ34" id="ZX5BZ34"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ34" style="zoom: 95%;width:20px" title="选择" value="34" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ44">
+                                        <span class="ico b44">44</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ44" class="odds"><label for="enabled_ZX5BZ44" id="ZX5BZ44"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ44" style="zoom: 95%;width:20px" title="选择" value="44" class="chooseOdds" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ5">
+                                        <span class="ico b05">05</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ5" class="odds"><label for="enabled_ZX5BZ5" id="ZX5BZ5"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ5" style="zoom: 95%;width:20px" title="选择" value="05" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ15">
+                                        <span class="ico b15">15</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ15" class="odds"><label for="enabled_ZX5BZ15" id="ZX5BZ15"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ15" style="zoom: 95%;width:20px" title="选择" value="15" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ25">
+                                        <span class="ico b25">25</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ25" class="odds"><label for="enabled_ZX5BZ25" id="ZX5BZ25"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ25" style="zoom: 95%;width:20px" title="选择" value="25" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ35">
+                                        <span class="ico b35">35</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ35" class="odds"><label for="enabled_ZX5BZ35" id="ZX5BZ35"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ35" style="zoom: 95%;width:20px" title="选择" value="35" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ45">
+                                        <span class="ico b45">45</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ45" class="odds"><label for="enabled_ZX5BZ45" id="ZX5BZ45"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ45" style="zoom: 95%;width:20px" title="选择" value="45" class="chooseOdds" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ6">
+                                        <span class="ico b06">06</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ6" class="odds"><label for="enabled_ZX5BZ6" id="ZX5BZ6"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ6" style="zoom: 95%;width:20px" title="选择" value="06" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ16">
+                                        <span class="ico b16">16</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ16" class="odds"><label for="enabled_ZX5BZ16" id="ZX5BZ16"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ16" style="zoom: 95%;width:20px" title="选择" value="16" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ26">
+                                        <span class="ico b26">26</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ26" class="odds"><label for="enabled_ZX5BZ26" id="ZX5BZ26"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ26" style="zoom: 95%;width:20px" title="选择" value="26" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ36">
+                                        <span class="ico b36">36</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ36" class="odds"><label for="enabled_ZX5BZ36" id="ZX5BZ36"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ36" style="zoom: 95%;width:20px" title="选择" value="36" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ46">
+                                        <span class="ico b46">46</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ46" class="odds"><label for="enabled_ZX5BZ46" id="ZX5BZ46"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ46" style="zoom: 95%;width:20px" title="选择" value="46" class="chooseOdds" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ7">
+                                        <span class="ico b07">07</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ7" class="odds"><label for="enabled_ZX5BZ7" id="ZX5BZ7"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ7" style="zoom: 95%;width:20px" title="选择" value="07" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ17">
+                                        <span class="ico b17">17</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ17" class="odds"><label for="enabled_ZX5BZ17" id="ZX5BZ17"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ17" style="zoom: 95%;width:20px" title="选择" value="17" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ27">
+                                        <span class="ico b27">27</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ27" class="odds"><label for="enabled_ZX5BZ27" id="ZX5BZ27"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ27" style="zoom: 95%;width:20px" title="选择" value="27" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ37">
+                                        <span class="ico b37">37</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ37" class="odds"><label for="enabled_ZX5BZ37" id="ZX5BZ37"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ37" style="zoom: 95%;width:20px" title="选择" value="37" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ47">
+                                        <span class="ico b47">47</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ47" class="odds"><label for="enabled_ZX5BZ47" id="ZX5BZ47"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ47" style="zoom: 95%;width:20px" title="选择" value="47" class="chooseOdds" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ8">
+                                        <span class="ico b08">08</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ8" class="odds"><label for="enabled_ZX5BZ8" id="ZX5BZ8"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ8" style="zoom: 95%;width:20px" title="选择" value="08" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ18">
+                                        <span class="ico b18">18</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ18" class="odds"><label for="enabled_ZX5BZ18" id="ZX5BZ18"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ18" style="zoom: 95%;width:20px" title="选择" value="18" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ28">
+                                        <span class="ico b28">28</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ28" class="odds"><label for="enabled_ZX5BZ28" id="ZX5BZ28"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ28" style="zoom: 95%;width:20px" title="选择" value="28" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ38">
+                                        <span class="ico b38">38</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ38" class="odds"><label for="enabled_ZX5BZ38" id="ZX5BZ38"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ38" style="zoom: 95%;width:20px" title="选择" value="38" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ48">
+                                        <span class="ico b48">48</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ48" class="odds"><label for="enabled_ZX5BZ48" id="ZX5BZ48"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ48" style="zoom: 95%;width:20px" title="选择" value="48" class="chooseOdds" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ9">
+                                        <span class="ico b09">09</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ9" class="odds"><label for="enabled_ZX5BZ9" id="ZX5BZ9"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ9" style="zoom: 95%;width:20px" title="选择" value="09" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ19">
+                                        <span class="ico b19">19</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ19" class="odds"><label for="enabled_ZX5BZ19" id="ZX5BZ19"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ19" style="zoom: 95%;width:20px" title="选择" value="19" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ29">
+                                        <span class="ico b29">29</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ29" class="odds"><label for="enabled_ZX5BZ29" id="ZX5BZ29"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ29" style="zoom: 95%;width:20px" title="选择" value="29" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ39">
+                                        <span class="ico b39">39</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ39" class="odds"><label for="enabled_ZX5BZ39" id="ZX5BZ39"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ39" style="zoom: 95%;width:20px" title="选择" value="39" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ49">
+                                        <span class="ico b49">49</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ49" class="odds"><label for="enabled_ZX5BZ49" id="ZX5BZ49"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ49" style="zoom: 95%;width:20px" title="选择" value="49" class="chooseOdds" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ10">
+                                        <span class="ico b10">10</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ10" class="odds"><label for="enabled_ZX5BZ10" id="ZX5BZ10"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ10" style="zoom: 95%;width:20px" title="选择" value="10" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ20">
+                                        <span class="ico b20">20</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ20" class="odds"><label for="enabled_ZX5BZ20" id="ZX5BZ20"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ20" style="zoom: 95%;width:20px" title="选择" value="20" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ30">
+                                        <span class="ico b30">30</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ30" class="odds"><label for="enabled_ZX5BZ30" id="ZX5BZ30"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ30" style="zoom: 95%;width:20px" title="选择" value="30" class="chooseOdds" type="checkbox"></td>
+                                <td class="name ">
+                                    <label for="enabled_ZX5BZ40">
+                                        <span class="ico b40">40</span>
+                                    </label>
+                                </td>
+                                <td id="oddsValue_ZX5BZ40" class="odds"><label for="enabled_ZX5BZ40" id="ZX5BZ40"></label></td>
+                                <td class="checkClass"><input id="enabled_ZX5BZ40" style="zoom: 95%;width:20px" title="选择" value="40" class="chooseOdds" type="checkbox"></td>
+                                <td class="name "></td>
+                                <td class="odds"></td>
+                                <td class="checkClass"></td>
+                    </tr>
+
+        </tbody>
+      
+    </table>
+
+
+</div>
+<div class="sepDiv"></div>
+
+
+<div id="chooseItem" style="display: none;color:red">
+
+</div>
+
+<div class="control bcontrol">
+    <div class="lefts" style="display:none">
+        已经选中
+        <span id="betcount">0</span> 注
+    </div>
+    <div class="buttons">
+        <input type="button" class="button2" value="快选金额" onclick="showsetting()">
+        <label class="checkdefault"><input type="checkbox" name="chkBox" class="checkbox chkDefaultCheck" id="chkDefaultCheck" onclick="setChkDefault();" /><span class="color_lv bold">预设</span></label>&nbsp;&nbsp;
+        <label id="quickAmount" class="quickAmount">
+            <span class="color_lv bold">金额</span>
+            <input id="txtDefaultAmount" class="txtDefaultAmount" onkeypress="return OnlyInt(event)" onkeyup="selectedAmount(this)" value="" />
+        </label>
+        <div class="money_btns chip-amount">
+            <a href="javascript:void(0)" onclick="setAmount(5);">5</a>
+            <a href="javascript:void(0)" onclick="setAmount(10);">10</a>
+            <a href="javascript:void(0)" onclick="setAmount(20);">20</a>
+            <a href="javascript:void(0)" onclick="setAmount(50);">50</a>
+            <a href="javascript:void(0)" onclick="setAmount(100);">100</a>
+            <a href="javascript:void(0)" onclick="setAmount(500);">500</a>
+
+        </div>
+        <input type="button" class="button buttonOk" value="确定" id="btnOk" onclick="betInstance.oddUIOkClick();" />
+        <input type="button" class="button cancel" value="重置" name="cancel" id="btnReset" onclick="betCancel();" />
+    </div>
+</div>
+
+
+
+
+        </div>
+    </div>
+
+
+</div><!--jt-container end-->
+
+    <div id="settingbet" title="快选金额" style="display:none;">
+        <input name="bet_1" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_2" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_3" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_4" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_5" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_6" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_7" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_8" placeholder="快选金额" class="ds" /><br />
+
+        <label>
+            <input name="settingbet" type="radio" id="settingbet_0" value="1" checked="checked" />
+            启动
+        </label>
+        <label>
+            <input name="settingbet" type="radio" id="settingbet_1" value="0" />
+            停用
+        </label>
+        <br />
+        <br />
+
+        <input type="button" class="button" value="储存" onClick="submitsetting()" />
+
+    </div>
+
+</body>
+</html>

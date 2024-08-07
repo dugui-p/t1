@@ -1,0 +1,377 @@
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <title>Welcome</title>
+
+    
+
+
+
+    <link href="/default/css/bettingm.min.css?v=DcCUxZM3DtlNJb5dgK3f_WfCSGX2ktl2UYwQpqUHKNo" type="text/css" rel="stylesheet" />
+    <link href="/js/jquery/new/jqueryuib.min.css?v=mxSAsHUP7hLKeL0BgaVt6Ob2wiMcK2DLkqVAg-qNK8g" type="text/css" rel="stylesheet" />
+    <link id="lotBetPageStyle" href="/default/css/Skins/darkyellow/skinbd.min.css?v=IrhXvswFheqXNgLiUiJGNTtm9uhSm5DqzPCV2euxOMo" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquerybundle.min.js?v=FQWwpeVYaorYmn-g02pSdU5X2Ez4zjgdteveRIg_Zig"></script>
+    <script type="text/javascript" src="/default/bettingscript.min.js?v=FYAmdsxM3xHUUZbLDCEPDUgoZMPs87VthS-4zJH4LZw"></script>
+
+
+    <style>
+    </style>
+    <!--  -->
+    <script>
+
+        var baseUrl = "";
+        var closePKSound =baseUrl+ '/default/media/du.mp3';
+        var _root = baseUrl;
+        var _lotteryType = "NMCHK6";
+        var _temploateCode = "HK6";
+        var _needRndNum = "0";
+        var page = "wx";
+        var hk6GameType = 'A';
+        var _userId = "72637fc312944e73ba16e9f089eed744";
+        var _currentSx = "龙";
+        var Installments = "2024219";
+
+        var contextPath = baseUrl;
+        var currentPk = {"Installments":"2024219","LotteryResult":null,"State":3,"CloseTimeStamp":0,"OpenTimeStamp":0,"PreLotteryResult":"47,05,40,12,42,09,14","ResultOther":null,"PreInstallments":"2024219","PreShengXiaoYear":"龙","TodayWinLost":null,"TemplateCode":"HK6","RndNum":null};
+        var oddsSetting;
+        var zodiacValue = _currentSx;
+        var __inidata = function (fuc) { fuc && fuc(); };
+        var __refresh = function (fuc) { fuc && fuc(); };
+        var showLmOdds="1";
+        var strTime="2024-08-06 22:17:14";
+        RERESH_ODDS= "30" - 0;
+        BETTING_NUM = "";
+        G_isHk6Type="1"-0;
+        $(function(){
+            parent.topTo();
+            parent.scrollTo(0, 0);
+        });
+
+    </script>
+
+</head>
+<body class="L_NMCHK6">
+    
+
+
+<div class="jt-container pad10 hk6">
+    
+
+
+<div id="right">
+    <table id="changlong" class="table_ball" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th colspan="2" class="table_side" title="点击长龙名称可快捷选中当前项投注">
+                    两面长龙排行 <span class="tip" title="点击长龙名称可快捷选中当前项投注">?</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <table id="drawLot" class="table_ball fastview" style="display:none;" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th class="table_side">
+                    近20期开奖走势
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+
+
+</div>
+
+
+    <div id="main">
+        
+<div id="header">
+    <div class="lottery_info">
+        <div class="lottery_info_left floatleft">
+            <span class="gameName" id="gameName">--</span>
+
+            <span class="result">&nbsp;今日输赢：<span id="bresult"><font>0</font></span></span>
+
+        </div>
+        <div class="lottery_info_right floatright" id="lottery_info">
+            <span id="drawNumber">--</span>期
+            <span class="cdContainer">&nbsp;&nbsp;距离封盘：<span class="color_lv bold"><span id="cdClose">00:00</span></span></span>
+            <span class="cdContainer" style="display: none">&nbsp;&nbsp;距开盘：<span class="color_lv bold" style="display: none;"><span id="cdOpen">00:00</span></span></span> &nbsp;&nbsp;距离开奖：
+            <span class="color_lv bold"><span id="cdDraw">00:00</span></span>
+            <span class="cdContainer" style="display:none;">&nbsp;&nbsp;随机挂码：<span class="color_lv bold"><span id="cdRnNum">00</span></span></span>
+            <span id="cdRefresh" style="float: right; width: 70px;">10秒</span>
+        </div>
+        <div class="clearfloat"></div>
+    </div>
+    <div id="betListForm" style="display: none" title="投注"></div>
+    <div id="betform" style="display: none" title="投注"></div>
+</div>
+        <div id="bet_panel" class="bet_panel input_panel hk6">
+
+            
+<script type="text/javascript">
+
+    var betTableMaker = {};
+    $(function () {
+        PeriodPanel && PeriodPanel.drawNumberPanel.html(Installments);
+        $("#gameName").html("五行七色波");
+       
+        betTableMaker = betbase.createNew("betform", "betListForm", "btnReset",
+            "oddsListId");
+        ShowQuickPancel(2);
+        //初始化多注投注对话框
+        betTableMaker.IniBetDatalist();
+        betTableMaker.setRefreshUrl(betbase.refreshDataUrl); ///website/betting/Refreshodds
+        betTableMaker.loadOddsData(betbase.loadDataUrl, {
+            settingCode: "TMWX,7SB"
+        }, 1);
+    });
+</script>
+<form name="form21">
+    <table class="table_ball table_betbox">
+        <tr class="head"><th>种类</th><th>号码</th><th>赔率</th><th class="ha">金额</th></tr>
+
+        <tbody>
+            <tr>
+                <td class="name " key="K_TMWX16" nowrap="">
+                    金
+                </td>
+                <td key="K_TMWX16" class="GWX_0 balls">
+                    
+    <span class="b01">01</span>&nbsp;    <span class="b02">02</span>&nbsp;    <span class="b09">09</span>&nbsp;    <span class="b10">10</span>&nbsp;    <span class="b23">23</span>&nbsp;    <span class="b24">24</span>&nbsp;    <span class="b31">31</span>&nbsp;    <span class="b32">32</span>&nbsp;    <span class="b39">39</span>&nbsp;    <span class="b40">40</span>&nbsp;
+                </td>
+                <td key="K_TMWX16" class="odds">
+                    <a class="odds" id="oddsValue_TMWX16" nowrap="">
+                        <label id="TMWX16"></label>
+                    </a>
+                </td>
+                <td key="K_TMWX16" style="text-align: center" class="amount ha" nowrap="">
+                    &nbsp;<input size="8" id="odds_TMWX16" key="K_TMWX16" title="五行--金" class="betAmount" onkeypress="return OnlyInt(event)" type="text">
+                </td>
+
+            </tr>
+            <tr>
+                <td class="name " key="K_TMWX17" nowrap="">
+                    木
+                </td>
+                <td key="K_TMWX17" class="GWX_0 balls">
+                    
+    <span class="b05">05</span>&nbsp;    <span class="b06">06</span>&nbsp;    <span class="b13">13</span>&nbsp;    <span class="b14">14</span>&nbsp;    <span class="b21">21</span>&nbsp;    <span class="b22">22</span>&nbsp;    <span class="b35">35</span>&nbsp;    <span class="b36">36</span>&nbsp;    <span class="b43">43</span>&nbsp;    <span class="b44">44</span>&nbsp;
+                </td>
+                <td key="K_TMWX17" class="odds">
+                    <a class="odds" id="oddsValue_TMWX17" nowrap="">
+                        <label id="TMWX17"></label>
+                    </a>
+                </td>
+                <td key="K_TMWX17" style="text-align: center" class="amount ha" nowrap="">
+                    &nbsp;<input size="8" id="odds_TMWX17" key="K_TMWX17" title="五行--木" class="betAmount" onkeypress="return OnlyInt(event)" type="text">
+                </td>
+
+            </tr>
+            <tr>
+                <td class="name " key="K_TMWX18" nowrap="">
+                    水
+                </td>
+                <td key="K_TMWX18" class="GWX_0 balls">
+                    
+    <span class="b11">11</span>&nbsp;    <span class="b12">12</span>&nbsp;    <span class="b19">19</span>&nbsp;    <span class="b20">20</span>&nbsp;    <span class="b27">27</span>&nbsp;    <span class="b28">28</span>&nbsp;    <span class="b41">41</span>&nbsp;    <span class="b42">42</span>&nbsp;    <span class="b49">49</span>&nbsp;
+                </td>
+                <td key="K_TMWX18" class="odds">
+                    <a class="odds" id="oddsValue_TMWX18" nowrap="">
+                        <label id="TMWX18"></label>
+                    </a>
+                </td>
+                <td key="K_TMWX18" style="text-align: center" class="amount ha" nowrap="">
+                    &nbsp;<input size="8" id="odds_TMWX18" key="K_TMWX18" title="五行--水" class="betAmount" onkeypress="return OnlyInt(event)" type="text">
+                </td>
+
+            </tr>
+            <tr>
+                <td class="name " key="K_TMWX19" nowrap="">
+                    火
+                </td>
+                <td key="K_TMWX19" class="GWX_0 balls">
+                    
+    <span class="b07">07</span>&nbsp;    <span class="b08">08</span>&nbsp;    <span class="b15">15</span>&nbsp;    <span class="b16">16</span>&nbsp;    <span class="b29">29</span>&nbsp;    <span class="b30">30</span>&nbsp;    <span class="b37">37</span>&nbsp;    <span class="b38">38</span>&nbsp;    <span class="b45">45</span>&nbsp;    <span class="b46">46</span>&nbsp;
+                </td>
+                <td key="K_TMWX19" class="odds">
+                    <a class="odds" id="oddsValue_TMWX19" nowrap="">
+                        <label id="TMWX19"></label>
+                    </a>
+                </td>
+                <td key="K_TMWX19" style="text-align: center" class="amount ha" nowrap="">
+                    &nbsp;<input size="8" id="odds_TMWX19" key="K_TMWX19" title="五行--火" class="betAmount" onkeypress="return OnlyInt(event)" type="text">
+                </td>
+
+            </tr>
+            <tr>
+                <td class="name " key="K_TMWX20" nowrap="">
+                    土
+                </td>
+                <td key="K_TMWX20" class="GWX_0 balls">
+                    
+    <span class="b03">03</span>&nbsp;    <span class="b04">04</span>&nbsp;    <span class="b17">17</span>&nbsp;    <span class="b18">18</span>&nbsp;    <span class="b25">25</span>&nbsp;    <span class="b26">26</span>&nbsp;    <span class="b33">33</span>&nbsp;    <span class="b34">34</span>&nbsp;    <span class="b47">47</span>&nbsp;    <span class="b48">48</span>&nbsp;
+                </td>
+                <td key="K_TMWX20" class="odds">
+                    <a class="odds" id="oddsValue_TMWX20" nowrap="">
+                        <label id="TMWX20"></label>
+                    </a>
+                </td>
+                <td key="K_TMWX20" style="text-align: center" class="amount ha" nowrap="">
+                    &nbsp;<input size="8" id="odds_TMWX20" key="K_TMWX20" title="五行--土" class="betAmount" onkeypress="return OnlyInt(event)" type="text">
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="sepDiv"></div>
+    <table class="table_ball table_betbox">
+        <tr class="head">
+            <th>种类</th>
+            <th>赔率</th>
+            <th class="ha">金额</th>
+            <th>种类</th>
+            <th>赔率</th>
+            <th class="ha">金额</th>
+            <th>种类</th>
+            <th>赔率</th>
+            <th class="ha">金额</th>
+            <th>种类</th>
+            <th>赔率</th>
+            <th class="ha">金额</th>
+        </tr>
+
+
+        <tbody>
+            <tr>
+                <td class="name red02 bg01" key="K_7SB28" nowrap="">
+                    红波
+                </td>
+                <td key="K_7SB28" class="odds">
+                    <a class="odds" id="oddsValue_7SB28" nowrap="">
+                        <label id="7SB28"></label>
+                    </a>
+                </td>
+                <td key="K_7SB28" style="text-align: center" class="amount ha" nowrap="">
+                    &nbsp;<input size="8" id="odds_7SB28" key="K_7SB28" title="7色波--红波" class="betAmount" onkeypress="return OnlyInt(event)" type="text">
+                </td>
+                <td class="name blue02 bg01" key="K_7SB29" nowrap="">
+                    蓝波
+                </td>
+                <td key="K_7SB29" class="odds">
+                    <a class="odds" id="oddsValue_7SB29" nowrap="">
+                        <label id="7SB29"></label>
+                    </a>
+                </td>
+                <td key="K_7SB29" style="text-align: center" class="amount ha" nowrap="">
+                    &nbsp;<input size="8" id="odds_7SB29" key="K_7SB29" title="7色波--蓝波" class="betAmount" onkeypress="return OnlyInt(event)" type="text">
+                </td>
+                <td class="name green02 bg01" key="K_7SB30" nowrap="">
+                    绿波
+                </td>
+                <td key="K_7SB30" class="odds">
+                    <a class="odds" id="oddsValue_7SB30" nowrap="">
+                        <label id="7SB30"></label>
+                    </a>
+                </td>
+                <td key="K_7SB30" style="text-align: center" class="amount ha" nowrap="">
+                    &nbsp;<input size="8" id="odds_7SB30" key="K_7SB30" title="7色波--绿波" class="betAmount" onkeypress="return OnlyInt(event)" type="text">
+                </td>
+                <td class="name " key="K_7SB31" nowrap="">
+                    和局
+                </td>
+                <td key="K_7SB31" class="odds">
+                    <a class="odds" id="oddsValue_7SB31" nowrap="">
+                        <label id="7SB31"></label>
+                    </a>
+                </td>
+                <td key="K_7SB31" style="text-align: center" class="amount ha" nowrap="">
+                    &nbsp;<input size="8" id="odds_7SB31" key="K_7SB31" title="7色波--和局" class="betAmount" onkeypress="return OnlyInt(event)" type="text">
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="sepDiv"></div>
+    
+
+<div id="chooseItem" style="display: none;color:red">
+
+</div>
+
+<div class="control bcontrol">
+    <div class="lefts" style="display:none">
+        已经选中
+        <span id="betcount">0</span> 注
+    </div>
+    <div class="buttons">
+        <input type="button" class="button2" value="快选金额" onclick="showsetting()">
+        <label class="checkdefault"><input type="checkbox" name="chkBox" class="checkbox chkDefaultCheck" id="chkDefaultCheck" onclick="setChkDefault();" /><span class="color_lv bold">预设</span></label>&nbsp;&nbsp;
+        <label id="quickAmount" class="quickAmount">
+            <span class="color_lv bold">金额</span>
+            <input id="txtDefaultAmount" class="txtDefaultAmount" onkeypress="return OnlyInt(event)" onkeyup="selectedAmount(this)" value="" />
+        </label>
+        <div class="money_btns chip-amount">
+            <a href="javascript:void(0)" onclick="setAmount(5);">5</a>
+            <a href="javascript:void(0)" onclick="setAmount(10);">10</a>
+            <a href="javascript:void(0)" onclick="setAmount(20);">20</a>
+            <a href="javascript:void(0)" onclick="setAmount(50);">50</a>
+            <a href="javascript:void(0)" onclick="setAmount(100);">100</a>
+            <a href="javascript:void(0)" onclick="setAmount(500);">500</a>
+
+        </div>
+        <input type="button" class="button buttonOk" value="确定" id="btnOk" onclick="betInstance.oddUIOkClick();" />
+        <input type="button" class="button cancel" value="重置" name="cancel" id="btnReset" onclick="betCancel();" />
+    </div>
+</div>
+
+
+</form>
+ 
+
+        </div>
+    </div>
+
+
+</div><!--jt-container end-->
+
+    <div id="settingbet" title="快选金额" style="display:none;">
+        <input name="bet_1" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_2" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_3" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_4" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_5" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_6" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_7" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_8" placeholder="快选金额" class="ds" /><br />
+
+        <label>
+            <input name="settingbet" type="radio" id="settingbet_0" value="1" checked="checked" />
+            启动
+        </label>
+        <label>
+            <input name="settingbet" type="radio" id="settingbet_1" value="0" />
+            停用
+        </label>
+        <br />
+        <br />
+
+        <input type="button" class="button" value="储存" onClick="submitsetting()" />
+
+    </div>
+
+</body>
+</html>

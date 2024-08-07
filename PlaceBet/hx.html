@@ -1,0 +1,380 @@
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <title>Welcome</title>
+
+    
+
+
+
+    <link href="/default/css/bettingm.min.css?v=DcCUxZM3DtlNJb5dgK3f_WfCSGX2ktl2UYwQpqUHKNo" type="text/css" rel="stylesheet" />
+    <link href="/js/jquery/new/jqueryuib.min.css?v=mxSAsHUP7hLKeL0BgaVt6Ob2wiMcK2DLkqVAg-qNK8g" type="text/css" rel="stylesheet" />
+    <link id="lotBetPageStyle" href="/default/css/Skins/darkyellow/skinbd.min.css?v=IrhXvswFheqXNgLiUiJGNTtm9uhSm5DqzPCV2euxOMo" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquerybundle.min.js?v=FQWwpeVYaorYmn-g02pSdU5X2Ez4zjgdteveRIg_Zig"></script>
+    <script type="text/javascript" src="/default/bettingscript.min.js?v=FYAmdsxM3xHUUZbLDCEPDUgoZMPs87VthS-4zJH4LZw"></script>
+
+
+    <style>
+    </style>
+    <!--  -->
+    <script>
+
+        var baseUrl = "";
+        var closePKSound =baseUrl+ '/default/media/du.mp3';
+        var _root = baseUrl;
+        var _lotteryType = "NMCHK6";
+        var _temploateCode = "HK6";
+        var _needRndNum = "0";
+        var page = "hx";
+        var hk6GameType = 'A';
+        var _userId = "72637fc312944e73ba16e9f089eed744";
+        var _currentSx = "龙";
+        var Installments = "2024219";
+
+        var contextPath = baseUrl;
+        var currentPk = {"Installments":"2024219","LotteryResult":null,"State":3,"CloseTimeStamp":0,"OpenTimeStamp":0,"PreLotteryResult":"47,05,40,12,42,09,14","ResultOther":null,"PreInstallments":"2024219","PreShengXiaoYear":"龙","TodayWinLost":null,"TemplateCode":"HK6","RndNum":null};
+        var oddsSetting;
+        var zodiacValue = _currentSx;
+        var __inidata = function (fuc) { fuc && fuc(); };
+        var __refresh = function (fuc) { fuc && fuc(); };
+        var showLmOdds="1";
+        var strTime="2024-08-06 22:12:36";
+        RERESH_ODDS= "30" - 0;
+        BETTING_NUM = "";
+        G_isHk6Type="1"-0;
+        $(function(){
+            parent.topTo();
+            parent.scrollTo(0, 0);
+        });
+
+    </script>
+
+</head>
+<body class="L_NMCHK6">
+    
+
+
+<div class="jt-container pad10 hk6">
+    
+
+
+<div id="right">
+    <table id="changlong" class="table_ball" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th colspan="2" class="table_side" title="点击长龙名称可快捷选中当前项投注">
+                    两面长龙排行 <span class="tip" title="点击长龙名称可快捷选中当前项投注">?</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <table id="drawLot" class="table_ball fastview" style="display:none;" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th class="table_side">
+                    近20期开奖走势
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+
+
+</div>
+
+
+    <div id="main">
+        
+<div id="header">
+    <div class="lottery_info">
+        <div class="lottery_info_left floatleft">
+            <span class="gameName" id="gameName">--</span>
+
+            <span class="result">&nbsp;今日输赢：<span id="bresult"><font>0</font></span></span>
+
+        </div>
+        <div class="lottery_info_right floatright" id="lottery_info">
+            <span id="drawNumber">--</span>期
+            <span class="cdContainer">&nbsp;&nbsp;距离封盘：<span class="color_lv bold"><span id="cdClose">00:00</span></span></span>
+            <span class="cdContainer" style="display: none">&nbsp;&nbsp;距开盘：<span class="color_lv bold" style="display: none;"><span id="cdOpen">00:00</span></span></span> &nbsp;&nbsp;距离开奖：
+            <span class="color_lv bold"><span id="cdDraw">00:00</span></span>
+            <span class="cdContainer" style="display:none;">&nbsp;&nbsp;随机挂码：<span class="color_lv bold"><span id="cdRnNum">00</span></span></span>
+            <span id="cdRefresh" style="float: right; width: 70px;">10秒</span>
+        </div>
+        <div class="clearfloat"></div>
+    </div>
+    <div id="betListForm" style="display: none" title="投注"></div>
+    <div id="betform" style="display: none" title="投注"></div>
+</div>
+        <div id="bet_panel" class="bet_panel input_panel hk6">
+
+            <script type="text/javascript">
+    var _hx;
+    $(document).ready(
+        function () {
+            PeriodPanel && PeriodPanel.drawNumberPanel.html(Installments);
+            $("#gameName").html("合肖");
+            _hx = hxBetting.createNew("betform", "betListForm", "btnReset", "oddsListId");
+            ShowQuickPancel(2);
+            _hx.oddUIOkClick = _hx.btnOkClick;
+            _hx.loadOddsData(betbase.loadDataUrl, {
+                settingCode: "TMHX"
+            }, 6);
+            _hx.IniBetDatalist();
+            _hx.setRefreshUrl(betbase.refreshDataUrl);
+        });
+</script>
+
+<table class="table_ball dx jj01">
+    <tbody id="oddsListId1">
+                    <tr>
+                <th class="name">类别</th>
+                    <td><input name="group1" class="group1" value="2&#x8096;&#x4E2D;" data-key="TMHX3" id="rad_TMHX3" type="radio"><label for="rad_TMHX3">2&#x8096;&#x4E2D;</label></td>
+                    <td><input name="group1" class="group1" value="3&#x8096;&#x4E2D;" data-key="TMHX5" id="rad_TMHX5" type="radio"><label for="rad_TMHX5">3&#x8096;&#x4E2D;</label></td>
+                    <td><input name="group1" class="group1" value="4&#x8096;&#x4E2D;" data-key="TMHX7" id="rad_TMHX7" type="radio"><label for="rad_TMHX7">4&#x8096;&#x4E2D;</label></td>
+                    <td><input name="group1" class="group1" value="5&#x8096;&#x4E2D;" data-key="TMHX9" id="rad_TMHX9" type="radio"><label for="rad_TMHX9">5&#x8096;&#x4E2D;</label></td>
+                    <td><input name="group1" class="group1" value="6&#x8096;&#x4E2D;" data-key="TMHX11" id="rad_TMHX11" type="radio"><label for="rad_TMHX11">6&#x8096;&#x4E2D;</label></td>
+                    <td><input name="group1" class="group1" value="6&#x8096;&#x4E0D;&#x4E2D;" data-key="TMHX12" id="rad_TMHX12" type="radio"><label for="rad_TMHX12">6&#x8096;&#x4E0D;&#x4E2D;</label></td>
+                    <td><input name="group1" class="group1" value="7&#x8096;&#x4E2D;" data-key="TMHX13" id="rad_TMHX13" type="radio"><label for="rad_TMHX13">7&#x8096;&#x4E2D;</label></td>
+                    <td><input name="group1" class="group1" value="8&#x8096;&#x4E2D;" data-key="TMHX15" id="rad_TMHX15" type="radio"><label for="rad_TMHX15">8&#x8096;&#x4E2D;</label></td>
+                    <td><input name="group1" class="group1" value="9&#x8096;&#x4E2D;" data-key="TMHX17" id="rad_TMHX17" type="radio"><label for="rad_TMHX17">9&#x8096;&#x4E2D;</label></td>
+                    <td><input name="group1" class="group1" value="10&#x8096;&#x4E2D;" data-key="TMHX19" id="rad_TMHX19" type="radio"><label for="rad_TMHX19">10&#x8096;&#x4E2D;</label></td>
+
+            </tr>
+            <tr>
+                <th class="name">赔率</th>
+                    <td class="odds" id="oddsValue_TMHX3"><label id="TMHX3"></label></td>
+                    <td class="odds" id="oddsValue_TMHX5"><label id="TMHX5"></label></td>
+                    <td class="odds" id="oddsValue_TMHX7"><label id="TMHX7"></label></td>
+                    <td class="odds" id="oddsValue_TMHX9"><label id="TMHX9"></label></td>
+                    <td class="odds" id="oddsValue_TMHX11"><label id="TMHX11"></label></td>
+                    <td class="odds" id="oddsValue_TMHX12"><label id="TMHX12"></label></td>
+                    <td class="odds" id="oddsValue_TMHX13"><label id="TMHX13"></label></td>
+                    <td class="odds" id="oddsValue_TMHX15"><label id="TMHX15"></label></td>
+                    <td class="odds" id="oddsValue_TMHX17"><label id="TMHX17"></label></td>
+                    <td class="odds" id="oddsValue_TMHX19"><label id="TMHX19"></label></td>
+
+            </tr>
+            <tr>
+                <th class="name">类别</th>
+                    <td><input name="group1" class="group1" value="11&#x8096;&#x4E2D;" data-key="TMHX21" id="rad_TMHX21" type="radio"><label for="rad_TMHX21">11&#x8096;&#x4E2D;</label></td>
+
+            </tr>
+            <tr>
+                <th class="name">赔率</th>
+                    <td class="odds" id="oddsValue_TMHX21"><label id="TMHX21"></label></td>
+
+            </tr>
+
+        <tr>
+
+            <td colspan="12" class="ys05" style="text-align: left;" align="left">
+                
+
+<span id="lianXiao">
+
+    <label class="bg01">
+        <input type="radio" name="playmethod" id="lianPeng" checked disabled="disabled" value="1" class="playmethod" />连碰
+    </label>
+    <label class="bg01">
+        <input name="playmethod" type="radio" id="dantuo" value="2" disabled="disabled" class="playmethod" />胆拖
+    </label>
+
+
+    &nbsp;&nbsp;
+    <span style="display: none" id="dantuoReg">
+        <label id="lblName" class="bg01">胆码数目:</label><input type="text" id="txtDmNum" class="hint" size="10" placeholder="请输入胆码数目"
+                                                             onkeypress="return OnlyInt(event)" size="10" />
+        <b><span style="color: red">请先填写胆码数目，再按所填数值选择胆码，之后选择拖码！</span></b>
+    </span>
+
+</span>
+            &nbsp;&nbsp;<b><span style="color: red" id="chooseItemDan"></span></b>
+
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="status_panel">
+    <table class="table_ball jj01">
+        <thead>
+            <tr>
+                <th>生肖</th>
+                <th width="8%">勾选</th>
+                <th colspan="4">号码</th>
+                <th>生肖</th>
+                <th width="8%">勾选</th>
+                <th colspan="4">号码</th>
+            </tr>
+        </thead>
+        <tbody id="oddsListId2">
+
+                <tr>
+                    <th class="bg01  name"><label for="key_&#x9F20;">&#x9F20;</label></th>
+                    <td class="checkClass"><input id="key_&#x9F20;" type="checkbox" value="&#x9F20;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9F20;"><span class="ico b05">05</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9F20;"><span class="ico b17">17</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9F20;"><span class="ico b29">29</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9F20;"><span class="ico b41">41</span></label></td>
+                    <th class="bg01  name"><label for="key_&#x9A6C;">&#x9A6C;</label></th>
+                    <td class="checkClass"><input id="key_&#x9A6C;" type="checkbox" value="&#x9A6C;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9A6C;"><span class="ico b11">11</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9A6C;"><span class="ico b23">23</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9A6C;"><span class="ico b35">35</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9A6C;"><span class="ico b47">47</span></label></td>
+                </tr>
+                <tr>
+                    <th class="bg01  name"><label for="key_&#x725B;">&#x725B;</label></th>
+                    <td class="checkClass"><input id="key_&#x725B;" type="checkbox" value="&#x725B;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x725B;"><span class="ico b04">04</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x725B;"><span class="ico b16">16</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x725B;"><span class="ico b28">28</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x725B;"><span class="ico b40">40</span></label></td>
+                    <th class="bg01  name"><label for="key_&#x7F8A;">&#x7F8A;</label></th>
+                    <td class="checkClass"><input id="key_&#x7F8A;" type="checkbox" value="&#x7F8A;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x7F8A;"><span class="ico b10">10</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x7F8A;"><span class="ico b22">22</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x7F8A;"><span class="ico b34">34</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x7F8A;"><span class="ico b46">46</span></label></td>
+                </tr>
+                <tr>
+                    <th class="bg01  name"><label for="key_&#x864E;">&#x864E;</label></th>
+                    <td class="checkClass"><input id="key_&#x864E;" type="checkbox" value="&#x864E;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x864E;"><span class="ico b03">03</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x864E;"><span class="ico b15">15</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x864E;"><span class="ico b27">27</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x864E;"><span class="ico b39">39</span></label></td>
+                    <th class="bg01  name"><label for="key_&#x7334;">&#x7334;</label></th>
+                    <td class="checkClass"><input id="key_&#x7334;" type="checkbox" value="&#x7334;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x7334;"><span class="ico b09">09</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x7334;"><span class="ico b21">21</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x7334;"><span class="ico b33">33</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x7334;"><span class="ico b45">45</span></label></td>
+                </tr>
+                <tr>
+                    <th class="bg01  name"><label for="key_&#x5154;">&#x5154;</label></th>
+                    <td class="checkClass"><input id="key_&#x5154;" type="checkbox" value="&#x5154;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x5154;"><span class="ico b02">02</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x5154;"><span class="ico b14">14</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x5154;"><span class="ico b26">26</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x5154;"><span class="ico b38">38</span></label></td>
+                    <th class="bg01  name"><label for="key_&#x9E21;">&#x9E21;</label></th>
+                    <td class="checkClass"><input id="key_&#x9E21;" type="checkbox" value="&#x9E21;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9E21;"><span class="ico b08">08</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9E21;"><span class="ico b20">20</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9E21;"><span class="ico b32">32</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9E21;"><span class="ico b44">44</span></label></td>
+                </tr>
+                <tr>
+                    <th class="bg01  name"><label for="key_&#x9F99;">&#x9F99;</label></th>
+                    <td class="checkClass"><input id="key_&#x9F99;" type="checkbox" value="&#x9F99;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9F99;"><span class="ico b01">01</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9F99;"><span class="ico b13">13</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9F99;"><span class="ico b25">25</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x9F99;"><span class="ico b37">37</span></label></td>
+                    <th class="bg01  name"><label for="key_&#x72D7;">&#x72D7;</label></th>
+                    <td class="checkClass"><input id="key_&#x72D7;" type="checkbox" value="&#x72D7;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x72D7;"><span class="ico b07">07</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x72D7;"><span class="ico b19">19</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x72D7;"><span class="ico b31">31</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x72D7;"><span class="ico b43">43</span></label></td>
+                </tr>
+                <tr>
+                    <th class="bg01  name"><label for="key_&#x86C7;">&#x86C7;</label></th>
+                    <td class="checkClass"><input id="key_&#x86C7;" type="checkbox" value="&#x86C7;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x86C7;"><span class="ico b12">12</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x86C7;"><span class="ico b24">24</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x86C7;"><span class="ico b36">36</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x86C7;"><span class="ico b48">48</span></label></td>
+                    <th class="bg01  name"><label for="key_&#x732A;">&#x732A;</label></th>
+                    <td class="checkClass"><input id="key_&#x732A;" type="checkbox" value="&#x732A;" class="zodiac chooseOdds" /></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x732A;"><span class="ico b06">06</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x732A;"><span class="ico b18">18</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x732A;"><span class="ico b30">30</span></label></td>
+                        <td class="balls" style="text-align:center"><label for="key_&#x732A;"><span class="ico b42">42</span></label></td>
+                </tr>
+
+        </tbody>
+    </table>
+</div>
+<div class="sepDiv"></div>
+
+
+<div id="chooseItem" style="display: none;color:red">
+
+</div>
+
+<div class="control bcontrol">
+    <div class="lefts" style="display:none">
+        已经选中
+        <span id="betcount">0</span> 注
+    </div>
+    <div class="buttons">
+        <input type="button" class="button2" value="快选金额" onclick="showsetting()">
+        <label class="checkdefault"><input type="checkbox" name="chkBox" class="checkbox chkDefaultCheck" id="chkDefaultCheck" onclick="setChkDefault();" /><span class="color_lv bold">预设</span></label>&nbsp;&nbsp;
+        <label id="quickAmount" class="quickAmount">
+            <span class="color_lv bold">金额</span>
+            <input id="txtDefaultAmount" class="txtDefaultAmount" onkeypress="return OnlyInt(event)" onkeyup="selectedAmount(this)" value="" />
+        </label>
+        <div class="money_btns chip-amount">
+            <a href="javascript:void(0)" onclick="setAmount(5);">5</a>
+            <a href="javascript:void(0)" onclick="setAmount(10);">10</a>
+            <a href="javascript:void(0)" onclick="setAmount(20);">20</a>
+            <a href="javascript:void(0)" onclick="setAmount(50);">50</a>
+            <a href="javascript:void(0)" onclick="setAmount(100);">100</a>
+            <a href="javascript:void(0)" onclick="setAmount(500);">500</a>
+
+        </div>
+        <input type="button" class="button buttonOk" value="确定" id="btnOk" onclick="betInstance.oddUIOkClick();" />
+        <input type="button" class="button cancel" value="重置" name="cancel" id="btnReset" onclick="betCancel();" />
+    </div>
+</div>
+
+
+
+
+        </div>
+    </div>
+
+
+</div><!--jt-container end-->
+
+    <div id="settingbet" title="快选金额" style="display:none;">
+        <input name="bet_1" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_2" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_3" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_4" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_5" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_6" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_7" placeholder="快选金额" class="ds" /><br />
+        <input name="bet_8" placeholder="快选金额" class="ds" /><br />
+
+        <label>
+            <input name="settingbet" type="radio" id="settingbet_0" value="1" checked="checked" />
+            启动
+        </label>
+        <label>
+            <input name="settingbet" type="radio" id="settingbet_1" value="0" />
+            停用
+        </label>
+        <br />
+        <br />
+
+        <input type="button" class="button" value="储存" onClick="submitsetting()" />
+
+    </div>
+
+</body>
+</html>
