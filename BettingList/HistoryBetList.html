@@ -1,6 +1,5 @@
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="viewport" content="user-scalable=yes, target-densityDpi=device-dpi">
@@ -10,10 +9,6 @@
     <meta name="renderer" content="webkit">
     <title>CheckedBetting</title>
 
-   
-
-    
-
 
     <link href="../default/css/layoutbl.min.css" type="text/css" rel="stylesheet">
     <link href="../js/jquery/new/jqueryuib.min.css" type="text/css" rel="stylesheet">
@@ -21,20 +16,15 @@
     <script src="../js/jquerybundle.min.js"></script>
 
 
-
-
-    
     <script type="text/javascript">
         var _root = "";
         var _urlParams = "";
     </script>
 </head>
 <body class="L_HK6 skin_blue">
-    
 
 
-
-    <script src="../default/pagerscript.min.js"></script>
+<script src="../default/pagerscript.min.js"></script>
 
 
 <style type="text/css">
@@ -47,16 +37,16 @@
         color: blue;
     }
 
-        .az:hover {
-            text-decoration: underline;
-        }
+    .az:hover {
+        text-decoration: underline;
+    }
 
     .list tbody .hover td, .list tbody .hover:nth-child(even) {
-        background: rgb(255,255,198);
+        background: rgb(255, 255, 198);
     }
 </style>
 <script type="text/javascript">
-     var TODAY = Date.parse("2024-08-06 09:45:46".replace(/-/g, "/"));
+    var TODAY = Date.parse("2024-08-06 09:45:46".replace(/-/g, "/"));
 </script>
 <script type="text/javascript">
     var logger = new Logger(true);
@@ -84,7 +74,9 @@
                 </select>
             </span>
             <span class="title">日期范围</span>
-            <span id="date"><input id="date_start" readonly="readonly" value="2024-07-30"> — <input id="date_end" readonly="readonly" value="2024-08-06"></span>
+            <span id="date"><input id="date_start" readonly="readonly" value="2024-07-30"> — <input id="date_end"
+                                                                                                    readonly="readonly"
+                                                                                                    value="2024-08-06"></span>
             <span>
                 <input type="button" class="button" value="查 询" onclick="betList.queryMemberHistory();">
                 <input type="button" class="button" value="本星期" onclick="dt.week(0); betList.queryMemberHistory(); ">
@@ -99,24 +91,24 @@
         <div id="tabInstallNo">
             <table class="list table table_ball">
                 <thead>
-                    <tr class="t11">
-                        <th height="20" width="218">
-                            日期
-                        </th>
-                        <th>
-                            笔数
-                        </th>
-                        <th>
-                            下注金额
-                        </th>
-                      
-                        <th>
-                            退水
-                        </th>
-                        <th>
-                            结果
-                        </th>
-                    </tr>
+                <tr class="t11">
+                    <th height="20" width="218">
+                        日期
+                    </th>
+                    <th>
+                        笔数
+                    </th>
+                    <th>
+                        下注金额
+                    </th>
+
+                    <th>
+                        退水
+                    </th>
+                    <th>
+                        结果
+                    </th>
+                </tr>
                 </thead>
 
                 <tbody id="betList"></tbody>
@@ -133,6 +125,6 @@
 
 </div>
 
-    
+
 </body>
 </html>
