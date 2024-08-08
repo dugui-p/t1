@@ -1,5 +1,5 @@
-
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!--避免IE使用兼容模式-->
@@ -9,77 +9,78 @@
     <title>用户登录</title>
     <link href="../../default/css/login.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
-
+    <script type="text/javascript" src="../../js/config.js"></script>
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             $(document).keydown(function (event) {
-            if (event.keyCode == 13) {
-                $(".submit_btn").click();
-            }
-        });
-        $(document).ready(function () {
-            $('.code img').click(function() {
-                $(this).attr('src', '/Free/VCode?_=' + (new Date()).getTime());
+                if (event.keyCode == 13) {
+                    $(".submit_btn").click();
+                }x
             });
-            Login();
-        });
-        function Login() {
-            $(".submit_btn").on("click", function () {
-                var Account = $("input[name=account]");
-                if (!$.trim(Account.val())) {
-                    alert("请输入登陆名!");
-                    Account.focus();
-                    return false;
-                }
-                var Password = $("input[name=password]");
-                if (!$.trim(Password.val())) {
-                    alert("请输入登陆密码!");
-                    Password.focus();
-                    return false;
-                }
-                var Code = $("input[name=code]");
-                if (!$.trim(Code.val())) {
-                    alert("请输入正确的验证码!");
-                    Code.focus();
-                    return false;
-                }
-                var _this = $(this);
-                $.ajax({
-                    type: "POST",
-                    dataType: "json",
-                    url: "/Mobile/Member/AjaxLogin?_=" + Math.random(),
-                    data: {
-                        account: Account.val(),
-                        password: Password.val(),
-                        code: Code.val(),
-                    },
-                    timeout: 10000,
-                    beforeSend: function () {
-                        _this.attr("disabled", true);
-                    },
-                    success: function (x) {
-                        if (x.State === 1) {
-                            window.location.href = x.Url;
-                        } else {
-                            alert(x.Msg);
-                        }
-                    },
-                    error: function () {
-                        alert("操作异常，重复出现请联系客服！");
-                    },
-                    complete: function () {
-                        _this.attr("disabled", false);
-                    }
+            $(document).ready(function () {
+                $('.code img').click(function () {
+                    $(this).attr('src', '/Free/VCode?_=' + (new Date()).getTime());
                 });
+                Login();
             });
-        }
+            function Login() {
+                $(".submit_btn").on("click", function () {
+                    var Account = $("input[name=account]");
+                    if (!$.trim(Account.val())) {
+                        alert("请输入登陆名!");
+                        Account.focus();
+                        return false;
+                    }
+                    var Password = $("input[name=password]");
+                    if (!$.trim(Password.val())) {
+                        alert("请输入登陆密码!");
+                        Password.focus();
+                        return false;
+                    }
+                    var Code = $("input[name=code]");
+                    if (!$.trim(Code.val())) {
+                        alert("请输入正确的验证码!");
+                        Code.focus();
+                        return false;
+                    }
+                    var _this = $(this);
+                    $.ajax({
+                        type: "POST",
+                        dataType: "json",
+                        url: globalIP + "/Mobile/Member/AjaxLogin?_=" + Math.random(),
+                        data: {
+                            account: Account.val(),
+                            password: Password.val(),
+                            code: Code.val(),
+                        },
+                        timeout: 10000,
+                        beforeSend: function () {
+                            _this.attr("disabled", true);
+                        },
+                        success: function (x) {
+                            if (x.State === 1) {
+                                window.location.href = x.Url;
+                            } else {
+                                alert(x.Msg);
+                            }
+                        },
+                        error: function () {
+                            alert("操作异常，重复出现请联系客服！");
+                        },
+                        complete: function () {
+                            _this.attr("disabled", false);
+                        }
+                    });
+                });
+            }
 
-            $('.login_box .code img').click(function() {
+            $('.login_box .code img').click(function () {
                 $(this).attr('src', '/Free/VCode?_=' + (new Date()).getTime());
             });
         })
     </script>
 </head>
+
 <body class="login_m login_bg" id="headerview">
     <form action="javascript:;" method="post" autocomplete="off">
         <div class="login_ad">
@@ -111,14 +112,17 @@
                 <input class="submit_btn" type="submit" value="登 录">
                 <div class="login_tool">
                     <a class="ico_login ico_login_pc" href="/Member/Login?AutoPage=false"></a>
-                        <a class="ico_aplus" href="javascript:void(0);"></a>
-                  
+                    <a class="ico_aplus" href="javascript:void(0);"></a>
+
                 </div>
             </div>
 
         </div>
-    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8GCtwr74-u1BlyQAmBuwJCaLTyaw6Lfsf7jNP2eN-e3wabQXsjurMoCKGSlqxuGgYSgN-w2yJrlITJv7eD0QPJ-2Wb90ghcSfZh2t6YcHpGstwnFr1PXeTUa6fg-dSTnGqGNXZEzsFzCPQH7L2AYcys"></form>
+        <input name="__RequestVerificationToken" type="hidden"
+            value="CfDJ8GCtwr74-u1BlyQAmBuwJCaLTyaw6Lfsf7jNP2eN-e3wabQXsjurMoCKGSlqxuGgYSgN-w2yJrlITJv7eD0QPJ-2Wb90ghcSfZh2t6YcHpGstwnFr1PXeTUa6fg-dSTnGqGNXZEzsFzCPQH7L2AYcys">
+    </form>
     <script src="../../default/js/login_ad.js"></script>
 
 </body>
+
 </html>
