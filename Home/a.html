@@ -10,6 +10,8 @@
     <meta name="renderer" content="webkit" />
     <title> Welcome</title>
 
+    <script type="text/javascript" src="/js/config.js"></script>
+
 
 
     <link href="/default/css/adminbd.min.css" type="text/css" rel="stylesheet" />
@@ -65,7 +67,7 @@
     <script>
         var _drawSitesBase=[{"LotteryType":"HK6","KJSiteUrl":"https://le66.co/","ZpSiteUrl":""},{"LotteryType":"MCHK6","KJSiteUrl":"https://166live.com/live-m6-a.html","ZpSiteUrl":""},{"LotteryType":"NMCHK6","KJSiteUrl":"","ZpSiteUrl":""}];
         var baseUrl = "";
-        var _root = "";
+        var _root = globalIP;
         var SOUND_URL = '/default/css/images/kaijiang.mp3';
         lotteryType = "NMCHK6";
         _topTemplateCode= "HK6";
@@ -124,7 +126,7 @@
             </div>
 
             <div class="top_menu">
-                <a target="frame" href="/BettingList/UnCheckBetting">
+                <a target="frame" href="/BettingList/UnCheckBetting.html">
                     <p>未结明细</p>
                 </a>
                 <a href="/BettingList/CheckedBetting" target="frame">

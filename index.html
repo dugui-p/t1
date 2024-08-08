@@ -9,6 +9,7 @@
     <title>用户登录</title>
     <link href="/default/css/login.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
     <script type="text/javascript">
         function IsPC() {
             var userAgentInfo = navigator.userAgent;
@@ -53,7 +54,8 @@
         });
         $(document).ready(function () {
             $('.code img').click(function () {
-                $(this).attr('src', '/Free/VCode?_=' + (new Date()).getTime());
+                // $(this).attr('src', '/Free/VCode?_=' + (new Date()).getTime());
+                $(this).attr('src', globalIP+'/Free/VCode?_=' + (new Date()).getTime());
             });
             Login();
         });
@@ -81,7 +83,7 @@
                 $.ajax({
                     type: "POST",
                     dataType: "json",
-                    url: "/Member/AjaxLogin?_=" + Math.random(),
+                    url: globalIP+"/Member/AjaxLogin?_=" + Math.random(),
                     data: {
                         account: Account.val(),
                         password: Password.val(),
