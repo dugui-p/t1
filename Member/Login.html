@@ -1,0 +1,161 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--避免IE使用兼容模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>用户登录</title>
+    <link href="/default/css/login.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript">
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+        function getUrlParam(a, b) {
+            //console.log();
+            b || (b = location.search);
+            if (1 < b.length) {
+                b = b.substr(1).split("&");
+                for (var c = 0; c < b.length; c++) if (0 != b[c].length) {
+                    var d = b[c].split("=", 2);
+                    if (d[1] && d[0] == a) return decodeURIComponent(d[1])
+                }
+            }
+        };
+        $(function () {
+            var AutoPage = getUrlParam("AutoPage");
+            if (!AutoPage) {
+                AutoPage = "true";
+            }
+            var IsPCClient = IsPC();
+            if (AutoPage == "true" && !IsPCClient) {
+                window.location.href = "/Mobile/Member/Login";
+            }
+        })
+        $(document).keydown(function (event) {
+            if (event.keyCode == 13) {
+                $(".submit_btn").click();
+            }
+        });
+        $(document).ready(function () {
+            $('.code img').click(function () {
+                // $(this).attr('src', '/Free/VCode?_=' + (new Date()).getTime());
+                $(this).attr('src', globalIP+'/Free/VCode?_=' + (new Date()).getTime());
+            });
+            Login();
+        });
+        function Login() {
+            $(".submit_btn").on("click", function () {
+                var Account = $("input[name=account]");
+                if (!$.trim(Account.val())) {
+                    alert("请输入登陆名!");
+                    Account.focus();
+                    return false;
+                }
+                var Password = $("input[name=password]");
+                if (!$.trim(Password.val())) {
+                    alert("请输入登陆密码!");
+                    Password.focus();
+                    return false;
+                }
+                var Code = $("input[name=code]");
+                if (!$.trim(Code.val())) {
+                    alert("请输入正确的验证码!");
+                    Code.focus();
+                    return false;
+                }
+                var _this = $(this);
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: globalIP+"/Member/AjaxLogin?_=" + Math.random(),
+                    data: {
+                        account: Account.val(),
+                        password: Password.val(),
+                        code: Code.val(),
+                    },
+                    timeout: 10000,
+                    beforeSend: function () {
+                        _this.attr("disabled", true);
+                    },
+                    success: function (x) {
+                        if (x.State === 1) {
+                            window.location.href = "/Member/Agreement.html";
+                        } else {
+                            $('.code img').click();
+                            alert(x.Msg);
+                        }
+                    },
+                    error: function () {
+                        $('.code img').click();
+                        alert("操作异常，重复出现请联系客服！");
+                    },
+                    complete: function () {
+                        _this.attr("disabled", false);
+                    }
+                });
+            });
+        }
+    </script>
+</head>
+
+<body class="login_bg" id="headerview">
+    <form autocomplete="off" action="javascript:;" method="post">
+        <div class="login_ad">
+            <a href="" target="_blank"><img src="/images/login_ad_cr.png" /></a>
+        </div>
+        <div class="login_wrap header">
+            <div class="login_box">
+                <div class="login_tips">
+                    <span class="left"></span>
+
+                </div>
+                <ul>
+                    <li>
+                        <i>帐 号：</i>
+                        <input name="account" type="text" autocomplete="off" placeholder="请输入您的账号" title="请输入您的账号">
+                    </li>
+                    <li>
+                        <i>密 码：</i>
+                        <input name="password" type="password" autocomplete="off" placeholder="请输入您的密码" title="您的密码">
+                    </li>
+                    <li>
+                        <i>验证码：</i>
+                        <dt class="code">
+                            <img src="Free/VCode.jpg" alt="none" title="看不清？点击更换一张验证图片">
+                        </dt>
+                        <ol>
+                            <input name="code" type="text" class="ico_key" placeholder="请输入验证码" title="验证码">
+                        </ol>
+                    </li>
+
+                </ul>
+                <input class="submit_btn" type="button" value="登 录">
+                <div class="login_tool">
+                    <a class="ico_login" href="/Mobile/Member/Login.html"></a>
+                    <a class="ico_aplus" href="javascript:void(0);"></a>
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <script src="/default/js/login_ad.js"></script>
+
+</body>
+
+</html>
