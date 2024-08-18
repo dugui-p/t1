@@ -1,0 +1,444 @@
+.sport-content-main {
+    padding-bottom: 10px;
+    /*height: calc(100vh - 154px - 50px);*/
+}
+
+.card-header {
+    background-color: white !important;
+    border-top-left-radius: 9px !important;
+    border-top-right-radius: 9px !important;
+}
+
+.card {
+    border-radius: 9px !important;
+}
+
+.sport-card-header {
+    font-size: 14px;
+}
+
+.sport-w-30 {
+    width: 30%;
+}
+
+.sport-w-70 {
+    width: 70%;
+}
+
+.btn-outline-blue {
+    color: #0d6efd;
+    border-color: #3661AD !important;
+}
+
+.btn-outline-blue:hover {
+    color: #fff !important;
+    background-color: #7CACFF;
+    border-color: #3661AD;
+}
+
+.swiper-pagination {
+    bottom: 0px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 6px !important; /* Increased width */
+    height: 6px !important; /* Increased height */
+    background: #000;
+    opacity: 0.2;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+
+.sport-no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 16px;
+    color: #B2B2B2;
+}
+
+.sport-footer {
+    z-index: 8;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    box-sizing: border-box;
+    background: #2161B3;
+    color: white;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: flex;
+    font-size: 14px;
+}
+
+.sport-footer > div {
+    flex: 1;
+    text-align: center;
+}
+
+.sport-footer-selected {
+    background-color: #6995E4;
+}
+
+.sport-collapse-body {
+    width: calc(100% + 10px);
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.sport-collapse-selected {
+    color: #6995E4;
+    font-weight: bold;
+    position: relative;
+}
+
+.sport-collapse-selected::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 23px;
+    border-bottom: 3px solid #6995E4;
+    transform: translateX(-50%);
+}
+
+.sport-collapse-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #7CACFF;
+    width: 100%;
+    font-size: 14px;
+    height: 25px;
+}
+
+.correct-score-header {
+    color: white;
+    background-color: #7CACFF;
+    font-size: 14px;
+    height: 25px;
+    width: 100%;
+}
+
+.sport-collapse-full-width {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.sport-collapse-menu {
+    flex: 0 0 auto;
+    color: #B2B2B2;
+    padding: 0px 14px;
+    font-size: 14px;
+}
+
+.correct-score-collapse-menu {
+    flex: 0 0 auto;
+    color: #B2B2B2;
+    padding: 0px 14px;
+    font-size: 14px;
+}
+
+.sport-btn-selected {
+    background-color: #7CACFF !important;
+    color: #fff !important;
+}
+
+.odds-selected {
+    background-color: #C3D9FF !important;
+}
+
+
+/*Betting Offcanvas*/
+.offcanvas-header {
+    padding: 12px 16px !important;
+    color: black;
+}
+
+.offcanvas-body {
+    padding: 0px !important;
+    background-color: #EEF0F1;
+}
+
+#offcanvas-badge {
+    background-color: #7CACFF;
+}
+
+.offcanvas-footer {
+    background: white;
+    width: 100%;
+    text-align: center;
+    line-height: 2.5em;
+    min-height: 65px;
+    padding: 12px 16px;
+    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.bet-receipt-footer {
+    width: 100%;
+    text-align: center;
+    line-height: 2.5em;
+    min-height: 40px;
+}
+
+.offcanvas-cards {
+    overflow-y: auto;
+    padding: 12px;
+}
+
+.multiple-cards {
+    overflow-y: auto;
+    padding: 12px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.bet-receipt-btn .bet-receipt-clear {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    width: 100%;
+    border-radius: 0px !important;
+}
+
+.bet-receipt-cards {
+    overflow-y: auto;
+    padding: 12px;
+    max-height: 375px;
+    min-height: 250px;
+}
+
+.multiple-receipt-wrapper {
+    overflow-y: auto;
+    max-height: 110px;
+}
+
+.multiple-receipt-cards {
+    overflow-y: auto;
+    padding: 12px;
+    max-height: 375px;
+}
+
+.btn-fill-blue {
+    background-color: #7CACFF !important;
+    color: #fff !important;
+}
+
+.btn-fill-white {
+    background-color: #fff !important;
+    color: #7CACFF !important;
+}
+
+#offcanvasBottom, #offcanvasBetReceipt, #offcanvasMultipleReceipt {
+    transition: transform 0.4s ease !important;
+}
+
+#offcanvasBottom.show, #offcanvasBetReceipt.show, #offcanvasMultipleReceipt.show {
+    transform: translateY(0) !important;
+}
+
+#offcanvasBottom:not(.show), #offcanvasBetReceipt:not(.show), #offcanvasMultipleReceipt:not(.show) {
+    transform: translateY(100%) !important;
+}
+
+#offcanvasTop {
+    transition: transform 0.4s ease !important;
+}
+
+#offcanvasTop.show {
+    transform: translateX(0) !important;
+}
+
+#offcanvasTop:not(.show) {
+    transform: translateX(100%) !important;
+}
+
+.custom-keypad-input {
+    font-size: 12px;
+    background-color: white !important;
+}
+
+.offcanvas-number {
+    display: inline-flex;
+    width: 32%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.offcanvas-number i {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: white;
+    border: 2px solid #C3D9FF;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #3661AD;
+}
+
+.offcanvas-number i:active {
+    background-color: #C3D9FF;
+    color: #fff;
+    transform: translateY(1px);
+}
+
+.offcanvas-numpad-del, .offcanvas-numpad-hide {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #C3D9FF;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #3661AD;
+}
+
+.offcanvas-numpad-max {
+    display: inline-block;
+    width: 100%;
+    height: 85px;
+    line-height: 85px;
+    background-color: #C3D9FF;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #3661AD;
+}
+
+.offcanvas-numpad-del:active, .offcanvas-numpad-hide:active, .offcanvas-numpad-max:active {
+    background-color: white;
+    border: 2px solid #C3D9FF;
+    transform: translateY(1px);
+}
+
+.offcanvas-card-delete {
+    background-color: #EEF0F1;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.offcanvas-card-delete-all {
+    color: #6895E4;
+    background-color: white;
+    font-size: 12px;
+    border: 2px solid #6995E4;
+    border-radius: 4px;
+    padding: 0px 10px;
+}
+
+.offcanvas-card-delete-all:active {
+    background-color: #6995E4;
+    color: white;
+}
+
+.sport-bet-closed {
+    font-size: 14px;
+    background-color: #AAAAAA !important;
+}
+
+.sport-same-match {
+    font-size: 14px;
+    background-color: #A8BAC8 !important;
+}
+
+.offcanvas-odds-wrapper {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.bet-receipt-odds {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.offcanvas-bounce-img{
+    position: relative;
+}
+
+.sport-profit-wrapper {
+    font-size: 10px;
+}
+
+.sport-profit {
+    font-size: 14px;
+}
+
+.bet-success-line {
+    width: 24px;
+    bottom: -5px;
+    border-bottom: 6px solid #3db39e;
+}
+
+.bet-confirming-line {
+    width: 24px;
+    bottom: -5px;
+    border-bottom: 6px solid black;
+}
+
+.bet-failed-line {
+    width: 24px;
+    bottom: -5px;
+    border-bottom: 6px solid red;
+}
+
+.multiple-cards-wrapper {
+    height: calc(100% - 95px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 405px;
+}
+
+.multiple-keypad-input-wrapper {
+    max-height: 225px;
+    overflow: auto;
+    position: relative;
+    border-bottom: 1px solid #edeef1;
+    background: white;
+    padding: 12px 16px;
+    padding-bottom: 0px;
+    flex-shrink: 0;
+}
+
+.multiple-footer {
+    background: white;
+    width: 100%;
+    text-align: center;
+    line-height: 2.5em;
+    padding: 12px 16px;
+    padding-top: 0px;
+    flex-shrink: 0;
+}
+
+.user-setting-title {
+    margin-left: -20px;
+}
+
+.user-setting-title::before {
+    content: "";
+    display: block;
+    background: #2b50e7;
+    width: 4px;
+    height: 25px;
+    border-radius: 0 9px 9px 0;
+    margin-right: 16px;
+}
+
+.sport-noto-sans-sc {
+    font-family: "Noto Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

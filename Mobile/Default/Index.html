@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="renderer" content="webkit" />
+    <title>Welcome</title>
+    
+    
+        <link href="/Areas/Mobile/Scripts/jqWeUi/lib/weui.min.css" type="text/css" rel="stylesheet" />
+        <link href="/Areas/Mobile/Scripts/jqWeUi/css/jquery-weui.min.css" type="text/css" rel="stylesheet" />
+        <link href="/Areas/Mobile/Content/css/main.min.css?v=7CkKgyN5rxABDiYSgWApfPvZuxMLDcXrgXDyyT9zIyA" rel="stylesheet" type="text/css" />
+        <link href="/Areas/Mobile/Content/font/iconfont.min.css" rel="stylesheet" type="text/css" />
+        <link href="/Areas/Mobile/Content/LCalendar/css/LCalendar.min.css" rel="stylesheet" type="text/css" />
+        <link href="/Areas/Mobile/Content/css/blue/skin.min.css" rel="stylesheet" type="text/css" />
+        <link href="/Areas/Mobile/Content/css/sport-header.css" rel="stylesheet" type="text/css" />
+        <link href="/Areas/Mobile/Content/css/sport-content.css" rel="stylesheet" type="text/css" />
+        <script src="/Areas/Mobile/layout.min.js?v=aw9gLYoP6MEQ09vAT-bIg0u224hNbWFLIci67u0uQTw"></script>
+    
+
+
+    
+
+
+
+    <script>
+        sumMoneyPoint = "0" - 0;
+        store.set("_skin_", "blue");
+
+    </script>
+</head>
+<body>
+    
+
+<script type="text/javascript">
+	var _drawSitesBase_KJSiteUrl = "";
+	var _drawSitesBase_ZpSiteUrl = "";
+	Bet_Params.LotoType = "NMCHK6";
+	Bet_Params.LotTemplate = "HK6";
+	Bet_Params.OddType = "A";
+	Bet_Params.LotoName = "&#x65B0;&#x6FB3;&#x95E8;&#x516D;&#x5408;&#x5F69;";
+	Bet_Params.NeedRndNum = "0";
+	Bet_Params.RunRefreshSec = "10" - 0;
+	Bet_Params.RefreshSecIns = "20" - 0;
+	BETTING_NUM = "8255";
+	RERESH_ONLINE = "120" - 0;
+	gts = "A";
+	var zodiacValue = "龙";
+	if (Bet_Params.LotTemplate == "HK6" || Bet_Params.LotTemplate == "F36X7" || Bet_Params.LotTemplate == "F31X7") {
+		hk6Notice = "&#x6210;&#x529F;";
+		hk6NoticeStatus = 3;
+		hk6NoticeLTname = "";
+
+		if (hk6NoticeStatus == 1) {
+			var lk = "GetHK6Notice." + Bet_Params.LotoType;
+			var lotKey = hk6NoticeLTname + "_" + hk6Notice;
+			var localKey = store.get(lk);
+			if (localKey != lotKey) {
+				store.set(lk, lotKey);
+				$.alert("<div style='text-align:center; height: 75px'> <image src = '../../Areas/Mobile/Content/images/info.png'> </div> <div style='font-weight:bold'>" + hk6NoticeLTname + "现已关盘 </div> 下期开盘时间为" + "<br> <div style='color:green'>" + hk6Notice + "</div>", "温馨提示");
+			}
+		}
+
+		if (hk6NoticeStatus == 2) {
+			var lk = "GetHK6Notice." + Bet_Params.LotoType;
+			var lotKey = hk6NoticeLTname + "_" + hk6Notice;
+			var localKey = store.get(lk);
+			if (localKey != lotKey) {
+				store.set(lk, lotKey);
+				$.alert("<div style='text-align:center; height: 75px'> <image src = '../../Areas/Mobile/Content/images/info.png'> </div> <div style='font-weight:bold'>" + hk6NoticeLTname + "现已关盘 </div>" + "<br>" + hk6Notice, "温馨提示");
+			}
+		}
+		$(document).ready(function () {
+			var listSetting = [];
+			var itemLimit = listSetting.reduce(function (obj, item) {
+				obj[item.Code] = item.ItemLimit;
+				return obj;
+			}, {});
+			localStorage.setItem('itemLimit', JSON.stringify(itemLimit));
+		});
+	}
+
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+
+	<div class="head_box">
+			<div class="left_btn">
+				<a href="/Mobile/Trend/ChangLong?lotteryType=NMCHK6"><i class="ico_tj tj_btn"></i></a>
+			</div>
+		<div class="sport_eu_cup_wrapper">
+			<a href="https://nizb.xyz/24D7h" target="_blank" style="display: block;">
+				<img src="https://img-qwzb.yzzb.xyz/qwzb_ad_b6806352a/mobile_be_ad.gif" alt="Advertisement" style="height: 38px;">
+			</a>
+		</div>
+		<h1 class="head_btn">&#x65B0;&#x6FB3;&#x95E8;&#x516D;&#x5408;&#x5F69;<i></i></h1>
+		<div class="right_btn">
+			<a><i class="ico_menu" id="open-button"></i></a>
+		</div>
+		<div class="menu_box clearfix">
+					<a href="/Mobile/Default/Index?lotteryType=NMCHK6">&#x65B0;&#x6FB3;&#x95E8;&#x516D;&#x5408;&#x5F69;</a>
+					<a href="/Mobile/Default/Index?lotteryType=MCHK6">&#x8001;&#x6FB3;&#x9580;&#x516D;&#x5408;&#x5F69;</a>
+					<a href="/Mobile/Default/Index?lotteryType=HK6">&#x9999;&#x6E2F;&#x516D;&#x5408;&#x5F69;</a>
+
+		</div>
+		<div class="tj_box clearfix">
+    <a href="/Mobile/Trend/ChangLong?lotteryType=NMCHK6">两面长龙</a>
+
+</div>
+	</div>
+
+<div class="container">
+	<script type="text/javascript">
+    $(document).ready(function () {
+        $('a[href="/Mobile/Member/Logout"]').on('click', function () {
+            //for足球世界
+            localStorage.removeItem('_betting_');
+            localStorage.removeItem('itemLimit');
+            localStorage.removeItem('_user_setting_');
+            document.cookie = "storedToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "storedApiServerAddress=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "tokenExpiryTime=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        });
+    });
+</script>
+<div class="menu-wrap">
+    <div class="menu_c">
+        <div class="menu_top">
+            <i><img src="/Areas/Mobile/Content/images/logo_w.png"></i>
+            <h2>会员：hhyc001(A盘)</h2>
+                        <h2>&#x4F4E;&#x9891;&#x5F69;&#x989D;&#x5EA6;：<span id="accountLimit_2" style="color:#f00">0</span></h2>
+           
+        </div>
+        <div class="menu_list">
+                <a href="/Mobile/Default/Index">
+                    <i class="icon iconfont icon-shouye-copy"></i>
+                <dd>首页<i class="icon iconfont icon-you"></i></dd>
+                </a>
+            <a href="/Mobile/BettingList/UnCheckBetting">
+                <i class="icon iconfont icon-mingxibiao"></i>
+            <dd>未结明细<i class="icon iconfont icon-you"></i></dd>
+            </a>
+            <a href="/Mobile/BettingList/CheckBetting">
+                <i class="icon iconfont icon-yijiesuan"></i>
+            <dd>今天已结<i class="icon iconfont icon-you"></i></dd>
+
+            </a>
+            <a href="/Mobile/BettingList/HistoryBetList">
+                <i class="icon iconfont icon-wendang"></i>
+            <dd>报表查询<i class="icon iconfont icon-you"></i></dd>
+            </a>
+            <a href="/Mobile/ResultHistory/Index?lotteryType=NMCHK6">
+                <i class="icon iconfont icon-tubiaozhizuomoban"></i>
+            <dd>开奖结果<i class="icon iconfont icon-you"></i></dd>
+            </a>
+            <a href="/Mobile/Member/Info">
+                <i class="icon iconfont icon-zixun"></i>
+            <dd>个人资讯<i class="icon iconfont icon-you"></i></dd>
+            </a>
+            <a href="/Mobile/GameRule/Index?lotteryType=NMCHK6">
+                <i class="icon iconfont icon-toufangguize"></i>
+            <dd>活动规则<i class="icon iconfont icon-you"></i></dd>
+            </a>
+            <a href="/Mobile/Notices/Notification">
+                <i class="icon iconfont icon-gonggao"></i>
+            <dd>历史公告<i class="icon iconfont icon-you"></i></dd>
+            </a>
+            <a href="/Mobile/Member/ChangePassword">
+                <i class="icon iconfont icon-weibiaoti1"></i>
+            <dd>密码设置<i class="icon iconfont icon-you"></i></dd>
+            </a>
+                <a id="setPK">
+                    <i class="icon iconfont icon-caidan"></i>
+                <dd>默认A盘<i class="icon iconfont icon-you"></i></dd>
+                </a>
+            <a href="/Mobile/Member/Logout">
+                <i class="icon iconfont icon-tuichu"></i>
+            <dd>退出<i class="icon iconfont icon-you"></i></dd>
+            </a>
+        </div>
+    </div>
+</div>
+	<div class="content-wrap">
+		<div class="content contentII HK6 NMCHK6">
+			<div class="main marT clearfix">
+				<div class="money_box clearfix">
+					<li>
+						<h2 class="accountLimit">0</h2>
+						<p>&#x4FE1;&#x7528;&#x989D;&#x5EA6;</p>
+					</li>
+					<li onclick="window.open('/Mobile/BettingList/unCheckBetting', '_self')">
+						<h2 id="unSettleAmount">0</h2>
+						<p>未结算金额</p>
+					</li>
+					<li onclick="window.open('/Mobile/BettingList/CheckBetting', '_self')">
+						<h2 id="bresult">0</h2>
+						<p>今日输赢</p>
+					</li>
+				</div>
+				<div class="money_btn clearfix"><i></i></div>
+					<div class="kj_box clearfix">
+						<li>
+						<dt><span id="PreInstallments">000</span>期</dt>
+						<dd>
+												<div class="open_box hk6_box" id="PreLotteryResult">
+												</div>
+						</dd>
+						</li>
+
+
+						<li>
+						<dt><span id="Installments">000</span>期</dt>
+						<dd>
+							<div class="time_box">
+								<ol>
+									封盘:
+									<span class="red_f" id="cdBetClose">00:00</span>
+								</ol>
+								<ol>
+									开奖:
+									<span class="green_f" id="cdResultOpen">00:00 </span>
+								</ol>
+								<ol style="display:none;">
+									挂码:
+									<span class="green_f" id="cdRndNum">-</span>
+								</ol>
+								<div class="update_c">
+									<i class="ico_update" id="odds_update"></i><span id="cdRefresh">08</span>
+								</div>
+							</div>
+						</dd>
+						</li>
+											</div>
+			</div>
+			
+
+<div class="m_box">
+    <div class="m_left" id="middle-content">
+        <a id="one18" temp='HK6' page='KuaiJie'>快捷</a>
+        <a id="one1" temp='HK6' page='TeMa' class="hover">特码</a>
+        <a id="one2" temp='HK6' page='LianMian'>两面</a>
+        <a id="one3" temp='HK6' page='SeBo'>色波</a>
+        <a id="one4" temp='HK6' page='ShengXiao'>特肖</a>
+        <a id="one5" temp='HK6' page='HeXiao'>合肖</a>
+        <a id="one6" temp='HK6' page='TouWeiShu'>头尾数</a>
+        <a id="one7" temp='HK6' page='ZhengMa'>正码</a>
+            <a id="one8" temp='HK6' page='ZhengMaTe' btype="">正码特</a>
+            <a id="one8" temp='HK6' page='ZhengMaTe' btype="B">正码特B</a>
+
+        <a id="one9" temp='HK6' page='ZhengMa1-6'>正码1-6</a>
+            <a id="one10" temp='HK6' page='WuXing'>五行</a>
+
+        <a id="one11" temp='HK6' page='YiXiaoWeiShu'>一肖尾数</a>
+            <a id="one12" temp='HK6' page='YiXiaoBuZhong'>一肖不中</a>
+                    <a id="one112" temp='HK6' page='WsBuZhong'>尾数不中</a>
+                    <a id="one12" temp='HK6' page='ZhengXiao'>正肖</a>
+                    <a id="one13" temp='HK6' page='QiSeBo'>7色波</a>
+                    <a id="one14" temp='HK6' page='ZhongXiao'>总肖</a>
+
+
+        <a id="one15" temp='HK6' page='ZiXuanBuZhong'>自选不中</a>
+        <a id="one16" temp='HK6' page='LianXiao'>连肖</a>
+        <a id="one16" temp='HK6' page='LianWei'>连尾</a>
+        <a id="one17" temp='HK6' page='LianMa'>连码</a>
+    </div>
+    <div class="m_right" id="content">
+        <div id="con_one_1" class="hover" style="display:block;">
+    <div class="team_box">
+        <div class="VerticalMenu">
+            <div class="hk6_box normal_ball">
+                <div><i class="fa fa-angle-right fa-lg" leng="" style="transform: rotate(0deg); "></i></div>
+                <div class="game_se">
+                    <select id="SecGame">
+                        <option key="TMA" value="A">特码A</option>
+                        <option key="TMB" value="B">特码B</option>
+                    </select>
+                </div>
+                <div class="box_item xz al" style="display: block;" id="li_title">
+                        <li key="TMA1" title="特码-1" v="1"><i class="ball_1"></i><h3>--</h3></li>
+                        <li key="TMA2" title="特码-2" v="2"><i class="ball_2"></i><h3>--</h3></li>
+                        <li key="TMA3" title="特码-3" v="3"><i class="ball_3"></i><h3>--</h3></li>
+                        <li key="TMA4" title="特码-4" v="4"><i class="ball_4"></i><h3>--</h3></li>
+                        <li key="TMA5" title="特码-5" v="5"><i class="ball_5"></i><h3>--</h3></li>
+                        <li key="TMA6" title="特码-6" v="6"><i class="ball_6"></i><h3>--</h3></li>
+                        <li key="TMA7" title="特码-7" v="7"><i class="ball_7"></i><h3>--</h3></li>
+                        <li key="TMA8" title="特码-8" v="8"><i class="ball_8"></i><h3>--</h3></li>
+                        <li key="TMA9" title="特码-9" v="9"><i class="ball_9"></i><h3>--</h3></li>
+                        <li key="TMA10" title="特码-10" v="10"><i class="ball_10"></i><h3>--</h3></li>
+                        <li key="TMA11" title="特码-11" v="11"><i class="ball_11"></i><h3>--</h3></li>
+                        <li key="TMA12" title="特码-12" v="12"><i class="ball_12"></i><h3>--</h3></li>
+                        <li key="TMA13" title="特码-13" v="13"><i class="ball_13"></i><h3>--</h3></li>
+                        <li key="TMA14" title="特码-14" v="14"><i class="ball_14"></i><h3>--</h3></li>
+                        <li key="TMA15" title="特码-15" v="15"><i class="ball_15"></i><h3>--</h3></li>
+                        <li key="TMA16" title="特码-16" v="16"><i class="ball_16"></i><h3>--</h3></li>
+                        <li key="TMA17" title="特码-17" v="17"><i class="ball_17"></i><h3>--</h3></li>
+                        <li key="TMA18" title="特码-18" v="18"><i class="ball_18"></i><h3>--</h3></li>
+                        <li key="TMA19" title="特码-19" v="19"><i class="ball_19"></i><h3>--</h3></li>
+                        <li key="TMA20" title="特码-20" v="20"><i class="ball_20"></i><h3>--</h3></li>
+                        <li key="TMA21" title="特码-21" v="21"><i class="ball_21"></i><h3>--</h3></li>
+                        <li key="TMA22" title="特码-22" v="22"><i class="ball_22"></i><h3>--</h3></li>
+                        <li key="TMA23" title="特码-23" v="23"><i class="ball_23"></i><h3>--</h3></li>
+                        <li key="TMA24" title="特码-24" v="24"><i class="ball_24"></i><h3>--</h3></li>
+                        <li key="TMA25" title="特码-25" v="25"><i class="ball_25"></i><h3>--</h3></li>
+                        <li key="TMA26" title="特码-26" v="26"><i class="ball_26"></i><h3>--</h3></li>
+                        <li key="TMA27" title="特码-27" v="27"><i class="ball_27"></i><h3>--</h3></li>
+                        <li key="TMA28" title="特码-28" v="28"><i class="ball_28"></i><h3>--</h3></li>
+                        <li key="TMA29" title="特码-29" v="29"><i class="ball_29"></i><h3>--</h3></li>
+                        <li key="TMA30" title="特码-30" v="30"><i class="ball_30"></i><h3>--</h3></li>
+                        <li key="TMA31" title="特码-31" v="31"><i class="ball_31"></i><h3>--</h3></li>
+                        <li key="TMA32" title="特码-32" v="32"><i class="ball_32"></i><h3>--</h3></li>
+                        <li key="TMA33" title="特码-33" v="33"><i class="ball_33"></i><h3>--</h3></li>
+                        <li key="TMA34" title="特码-34" v="34"><i class="ball_34"></i><h3>--</h3></li>
+                        <li key="TMA35" title="特码-35" v="35"><i class="ball_35"></i><h3>--</h3></li>
+                        <li key="TMA36" title="特码-36" v="36"><i class="ball_36"></i><h3>--</h3></li>
+                        <li key="TMA37" title="特码-37" v="37"><i class="ball_37"></i><h3>--</h3></li>
+                        <li key="TMA38" title="特码-38" v="38"><i class="ball_38"></i><h3>--</h3></li>
+                        <li key="TMA39" title="特码-39" v="39"><i class="ball_39"></i><h3>--</h3></li>
+                        <li key="TMA40" title="特码-40" v="40"><i class="ball_40"></i><h3>--</h3></li>
+                        <li key="TMA41" title="特码-41" v="41"><i class="ball_41"></i><h3>--</h3></li>
+                        <li key="TMA42" title="特码-42" v="42"><i class="ball_42"></i><h3>--</h3></li>
+                        <li key="TMA43" title="特码-43" v="43"><i class="ball_43"></i><h3>--</h3></li>
+                        <li key="TMA44" title="特码-44" v="44"><i class="ball_44"></i><h3>--</h3></li>
+                        <li key="TMA45" title="特码-45" v="45"><i class="ball_45"></i><h3>--</h3></li>
+                        <li key="TMA46" title="特码-46" v="46"><i class="ball_46"></i><h3>--</h3></li>
+                        <li key="TMA47" title="特码-47" v="47"><i class="ball_47"></i><h3>--</h3></li>
+                        <li key="TMA48" title="特码-48" v="48"><i class="ball_48"></i><h3>--</h3></li>
+                        <li key="TMA49" title="特码-49" v="49"><i class="ball_49"></i><h3>--</h3></li>
+                </div>
+            </div>
+            <div class="hk6_box normal_ball">
+                <div><span>两面</span><i class="fa fa-angle-right fa-lg" leng="s" style="transform: rotate(0deg); "></i></div>
+                <div class="box_item xz" style="display: block;">
+                    <li key="TMDSDX50" title="特码两面-特单"><h2>特单</h2><h3> --</h3></li>
+                    <li key="TMDSDX51" title="特码两面-特双"><h2>特双</h2><h3> --</h3></li>
+                    <li key="TMDSDX52" title="特码两面-特大"><h2>特大</h2><h3> --</h3></li>
+                    <li key="TMDSDX53" title="特码两面-特小"><h2>特小</h2><h3> --</h3></li>
+                    <li key="TMDSDX54" title="特码两面-特合单"><h2>特合单</h2><h3> --</h3></li>
+                    <li key="TMDSDX55" title="特码两面-特合双"><h2>特合双</h2><h3> --</h3></li>
+                    <li key="TMDSDX56" title="特码两面-特合大"><h2>特合大</h2><h3> --</h3></li>
+                    <li key="TMDSDX57" title="特码两面-特合小"><h2>特合小</h2><h3> --</h3></li>
+                    <li key="TMDSDX58" title="特码两面-特尾大"><h2>特尾大</h2><h3> --</h3></li>
+                    <li key="TMDSDX59" title="特码两面-特尾小"><h2>特尾小</h2><h3> --</h3></li>
+
+                    <li key="LM73" title="特码两面-特大单"><h2>特大单</h2><h3> --</h3></li>
+                    <li key="LM74" title="特码两面-特大双"><h2>特大双</h2><h3> --</h3></li>
+                    <li key="LM75" title="特码两面-特小单"><h2>特小单</h2><h3> --</h3></li>
+                    <li key="LM76" title="特码两面-特小双"><h2>特小双</h2><h3> --</h3></li>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        iniTitle();
+        loadOddsByTM("A");
+        $("#SecGame").change(function () {
+            var val = $(this).val();
+            iniTitle();
+            loadOddsByTM(val);
+        });
+    });
+    function iniTitle() {
+        var val = $("#SecGame").val();
+        $("#li_title li").each(function () {
+            var v = $(this).attr("v");
+            $(this).attr("title", "特码" + val + "-" + v);
+        });
+    }
+    function loadOddsByTM(type) {
+        IniBetData();
+        Bet_Params.Itype = "-1";
+        Bet_Params.SettingCode = "TMA,LM,TMDSDX";
+        Bet_Params.isTmb = "A" == type ? 0 : 1;
+        RunRefresh();
+    }
+</script>
+    </div>
+
+</div>
+
+		</div>
+	</div>
+</div>
+<div class="cd-popup" role="alert" id="cd_win_1">
+	<div class="cd-popup-container">
+		<h2>快速注单</h2>
+		<div class="ys_money">
+		</div>
+
+
+		<div class="win_tool">
+			<li>
+			<dd>
+				<input id="QuickAmount" type="text" placeholder="最低投注1元" pattern="[0-9]*" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" onblur='this.value = this.value.replace(/\D+/g, "")' oninput='this.value = this.value.replace(/\D+/g, "")'>
+
+			</dd>
+			<a class="gold_btn quick_btn2" id="QuickBtn">快选金额</a>
+			</li>
+			<li>
+				<a class="red_btn all_btn" id="SaveBetBtn" style="width:100%; margin-top:.4em">立即投注</a>
+			</li>
+			<li class="all_f">
+			<dd>注数：<span class="red_f " id="betCount">00</span></dd>
+			<dd>总计：<span class="red_f " id="betTotalMoney">￥00</span></dd>
+			</li>
+			<div class="quick_box2">
+				<a href="javascript:void(0)" onclick="setAmount(10)">10</a>
+				<a href="javascript:void(0)" onclick="setAmount(20)">20</a>
+				<a href="javascript:void(0)" onclick="setAmount(40)">40</a>
+				<a href="javascript:void(0)" onclick="setAmount(60)">60</a>
+				<a href="javascript:void(0)" onclick="setAmount(100)">100</a>
+				<i class="arrow-down"></i>
+			</div>
+		</div>
+		<!--
+			<ul class="cd-buttons">
+
+			<li><a href="#0">Yes</a></li>
+
+			<li><a href="#0">No</a></li>
+
+		</ul>-->
+
+		<a href="#0" class="cd-popup-close img-replace"></a>
+
+	</div>
+
+	<!-- cd-popup-container -->
+
+</div>
+<div class="cd-popup" role="alert" id="cd_win_2">
+	<div class="cd-popup-container">
+		<h2>预设金额</h2>
+		<div class="ys_money" id="ys_amount">
+			<li>
+				<ol><input name="" type="text" placeholder="输入金额" pattern="[0-9]*" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" onblur='this.value = this.value.replace(/\D+/g, "")' oninput='this.value = this.value.replace(/\D+/g, "")'></ol>
+			</li>
+			<li>
+				<ol><input name="" type="text" placeholder="输入金额" pattern="[0-9]*" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" onblur='this.value = this.value.replace(/\D+/g, "")' oninput='this.value = this.value.replace(/\D+/g, "")'></ol>
+			</li>
+			<li>
+				<ol><input name="" type="text" placeholder="输入金额" pattern="[0-9]*" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" onblur='this.value = this.value.replace(/\D+/g, "")' oninput='this.value = this.value.replace(/\D+/g, "")'></ol>
+			</li>
+			<li>
+				<ol><input name="" type="text" placeholder="输入金额" pattern="[0-9]*" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" onblur='this.value = this.value.replace(/\D+/g, "")' oninput='this.value = this.value.replace(/\D+/g, "")'></ol>
+			</li>
+			<li>
+				<ol><input name="" type="text" placeholder="输入金额" pattern="[0-9]*" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" onblur='this.value = this.value.replace(/\D+/g, "")' oninput='this.value = this.value.replace(/\D+/g, "")'></ol>
+			</li>
+			<li>
+				<ol>
+					<input type="radio" class="regular-checkbox2" id="checkbox-7-1" name="settingbet" value="1" checked />
+					<label for="checkbox-7-1"></label>启动
+					<input type="radio" class="regular-checkbox2" id="checkbox-7-2" name="settingbet" value="0" />
+					<label for="checkbox-7-2"></label>禁用
+				</ol>
+			</li>
+		</div>
+		<div class="win_tool">
+
+			<dd>
+				<a class="gold_btn long_btn" onclick="submitsetting();">确 定</a>
+			</dd>
+
+		</div>
+		<!--
+			<ul class="cd-buttons">
+
+			<li><a href="#0">Yes</a></li>
+
+			<li><a href="#0">No</a></li>
+
+		</ul>-->
+
+		<a href="#0" class="cd-popup-close img-replace"></a>
+
+	</div>
+
+	<!-- cd-popup-container -->
+
+</div>
+<div class="num_box cd-popup-trigger" id="myModal_1">0注</div>
+<div class="all_win all_box" style="display: none;">
+	<div class="all_top">
+		<h1>最新注单</h1>
+		<a class="all_close"></a>
+	</div>
+	<div class="table_box tb_center" style="margin-top:3em;">
+		<div class="content-wrap" id="lastBets-wap">
+			<div class="content" style="margin:0.2em;">
+				<table border="0" cellspacing="0" cellpadding="0" class="table_pos">
+					<thead>
+						<tr>
+							<th width="25%">期数</th>
+							<th width="55%">玩法</th>
+							<th width="20%">金额</th>
+						</tr>
+					</thead>
+					<tbody id="lastBets"></tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="btm_menu">
+		<a class="red_btn" onclick='javascript:$(".all_close").trigger("click")'>关闭</a>
+	</div>
+</div>
+<div class="btm_menu">
+	<a class="gold_btn quick_btn">快选金额</a>
+	<div class="quick_box">
+		<a href="javascript:void(0)" onclick="setAmount(10)">10</a>
+		<a href="javascript:void(0)" onclick="setAmount(20)">20</a>
+		<a href="javascript:void(0)" onclick="setAmount(40)">40</a>
+		<a href="javascript:void(0)" onclick="setAmount(60)">60</a>
+		<a href="javascript:void(0)" onclick="setAmount(100)">100</a>
+		<a href="javascript:void(0)" class="myModal_2">设置</a>
+		<i class="arrow-down"></i>
+	</div>
+	<dd>
+		<div class="k_box">
+			<input id="BetAmounts" type="text" value="" placeholder="金额" pattern="[0-9]*" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" onblur='this.value = this.value.replace(/\D+/g, "")' oninput='this.value = this.value.replace(/\D+/g, "")'>
+		</div>
+	</dd>
+	<a class="red_btn" id="ShowBet">投注</a>
+	<a class="gold_btn" id="ResertBet">重置</a>
+
+</div>
+
+    
+    
+    
+        <script src="/Areas/Mobile/Content/js/main.min.js?v=0XbUunqewCE1T0zYXhr_dKTZ9OGWk3DcmvB-4vLnRU4"></script>
+    
+</body>
+</html>

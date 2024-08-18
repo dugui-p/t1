@@ -1,0 +1,329 @@
+/*体育世界*/
+.sport-head-box {
+    background: #2161B3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 8;
+    text-align: center;
+    line-height: 2.5em;
+    height: 2.5em;
+}
+
+.sport-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sport-row-between {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 42px;
+    background-color: white;
+    border-bottom: 2px solid #3661AD;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    padding: 0px 15px;
+}
+
+.sport-date-filter-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    height: 42px;
+    background-color: white;
+    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.2), 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.sport-credit-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+}
+
+.sport-credit-wrapper > * {
+    margin-right: 4px;
+}
+
+#sport-credit-balance {
+    color: #FF0404;
+}
+
+.sport-league-filter {
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.sport-basis-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    flex-basis: 50px;
+}
+
+.sport-basis-2 {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.sport-ico-back {
+    background: url("../images/ico_back.png") no-repeat center;
+    background-size: 1.6em;
+    width: 2em;
+    height: 2em;
+    display: block;
+}
+
+.sport-nav-bar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    font-size: 15px;
+}
+
+.sport-selected {
+    background-color: #fff;
+    color: #6995E4;
+    font-weight: bold;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.sport-scrollmenu {
+    flex-grow: 1;
+    background-color: #fff;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: auto;
+    height: 42px;
+}
+
+.sport-scrollmenu-item {
+    flex: 0 0 auto;
+    color: #B2B2B2;
+    padding: 0px 14px;
+    font-size: 14px;
+}
+
+.sport-scrollmenu-item:first-child {
+    margin-left: 15px !important;
+}
+
+.sport-scrollmenu-item:last-child {
+    margin-right: 15px !important;
+}
+
+.sport-popular-item {
+    flex: 0 0 auto;
+    color: #B2B2B2;
+    padding: 0px 14px;
+    font-size: 14px;
+}
+
+.sport-popular-item:first-child {
+    margin-left: 15px !important;
+}
+
+.sport-popular-item:last-child {
+    margin-right: 15px !important;
+}
+
+.sport-id-selected {
+    color: #6995E4;
+    font-weight: bold;
+    position: relative;
+}
+
+.sport-id-selected::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 23px;
+    border-bottom: 3px solid #6995E4;
+    transform: translateX(-50%);
+}
+
+.sport-id-filter {
+    padding: 16px 10px;
+    display: flex;
+    flex-basis: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 55px;
+    box-shadow: -10px 0 10px -10px rgba(0, 0, 0, 0.2);
+}
+
+.sport-filter-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    position: relative;
+}
+
+.sport-filter-row > * {
+    margin-right: 4px;
+}
+
+.sport-divider {
+    content: "";
+    position: absolute;
+    right: -3px;
+    height: 24px;
+    width: 3px;
+    background-color: #6995E4;
+}
+
+.sport-filter-selected {
+    color: #6995E4;
+    font-weight: bold;
+}
+
+.sport-hide-menu {
+    display: none !important;
+}
+
+.sport-noto-sans-sc {
+    font-family: "Noto Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sport-head-box i {
+    width: 2em;
+    height: 2em;
+    display: block;
+}
+
+.sport-head-box .ico_menu {
+    background: url("../images/ico_menu.png") no-repeat center;
+    background-size: 1.6em;
+}
+
+.menu_top h2 {
+    line-height: 1.5em !important;
+    font-size: 20px !important;
+    margin-bottom: 0 !important;
+}
+
+.menu_list a dd {
+    -webkit-box-flex: 1 !important;
+    -moz-flex: 1 !important;
+    flex: 1 !important;
+    border-bottom: 1px solid #e1e1e1 !important;
+    padding: 0em 0.5em !important;
+    height: 1.8em !important;
+    line-height: 1.8em !important;
+    position: relative !important;
+    margin-bottom: 0 !important;
+}
+
+.menu_list a {
+    box-sizing: border-box !important;
+    display: -webkit-box !important;
+    display: -moz-flex !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 0.6em !important;
+    font-size: 0.8em !important;
+    height: 45px;
+    text-decoration: none !important;
+    color: #362e24 !important;
+}
+
+.menu_list a dd i {
+    top: -0.5em !important;
+}
+
+/*League Filter*/
+
+.league-filter-body {
+    margin-top: 44px;
+    overflow-y: auto;
+    margin-bottom: 50px;
+}
+
+.league-filter-bottom {
+    position: absolute;
+    bottom: 0;
+    background: #333;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.league-filter-header {
+    height: 44px;
+    background: #2161B3;
+    border-radius: 0 0 16px 16px;
+}
+
+.league-filter-tags {
+    height: 40px;
+    position: relative;
+}
+
+.league-filter-tags::before {
+    content: "";
+    background: #2b50e7;
+    width: 4px;
+    height: 25px;
+    border-radius: 0 9px 9px 0;
+    margin-right: 12px;
+    margin-left: -20px;
+    position: absolute;
+}
+
+.league-filter-item {
+    height: 30px;
+}
+
+.league-matches-count {
+    height: 15px;
+    min-width: 17px;
+    background: #c31337;
+    border-radius: 0.2rem;
+    font-weight: 500;
+    font-size: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.league-filter-count-wrapper {
+    font-size: 12px;
+}
+
+.sport-font-size-12 {
+    font-size: 12px;
+}
+
+.league-hidden {
+    display: none !important;
+}
